@@ -1,0 +1,192 @@
+/*//////////////////////////////////////HOME SECTION  */
+
+.home__click-me {
+  width: 16px;
+  height: 70px;
+  position: absolute;
+  top: 10rem;
+  right: 5.2rem;
+  animation: move 1s infinite;
+}
+
+@keyframes move {
+  0% {
+    top: 10rem;
+  }
+  50% {
+    top: 11rem;
+  }
+  100% {
+    top: 10rem;
+  }
+}
+
+.home {
+  width: 100%;
+  height: 100%;
+  color: var(--white-color);
+  margin-top: 9rem;
+  padding: 0 4rem;
+}      
+        @media only screen and (max-height: 600px) {
+          .home {
+            margin-top: 2rem;
+          }
+        }
+        
+        @media only screen and (min-width: 700px) {
+          .home {
+            padding: 8vh 0 0 10%;
+          }
+        }
+        
+
+        @media only screen and (min-width: 1000px){
+          
+          .home__click-me {
+            display: none;
+          }
+          
+          .home {
+              margin-top: 0;
+              padding: 8vh 0 0 15%;
+              background-image: linear-gradient(150deg, rgba( 13, 37, 60, 1) 0%, rgba( 13, 37, 60, 1) 50%, rgba( 13, 37, 60, .9) 55%, rgba( 13, 37, 60, .8) 100%, transparent 0%), url('./img/laptop_background.jpg');
+              background-size: 100%;
+            }
+          }
+        
+        @media only screen and (min-width: 1400px){
+          .home {
+              margin-top: 0;
+              padding: 14vh 0 0 15%;
+          }  
+        }
+
+.home h3, h2 {
+  font-weight: 800;
+}
+
+.home h3 {
+  line-height: 40px;
+}
+
+        @media only screen and (min-width: 1000px){
+            .home h3 {
+            font-size: 24px;
+            line-height: 30px;
+            letter-spacing: 0.05em;
+            }
+        }
+
+        @media only screen and (min-width: 1400px){
+          .home h3 {
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: 0.05em;
+            }
+          }
+
+.home h2 {
+  margin-top: 1rem;
+  line-height: 55px;
+  text-transform: uppercase;
+}
+          @media only screen and (min-width: 1000px){
+            .home h2 {
+            margin-top: 2rem;
+            font-size: 36px;
+            line-height: 60px;
+            letter-spacing: 0.05em;
+          }   
+        }
+
+
+        @media only screen and (min-width: 1400px){
+          .home h2 {
+            margin-top: 2rem;
+            font-size: 64px;
+            line-height: 80px;
+            letter-spacing: 0.05em;
+          }    
+        }
+
+.btn {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14rem;
+  height: 7rem;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  filter: drop-shadow(2px 5px 5px rgba(0, 0, 0, 0.25));
+}
+
+        @media only screen and (min-width: 1500px){
+            .btn {
+              margin-top: 8rem;
+              width: 18rem;
+              height: 8rem;
+            }
+        }
+
+.home__contact {
+  position: absolute;
+  bottom: 5%;
+  width: 80%;
+  
+  display: grid;
+  grid-template-columns: 50% 50% ; 
+  grid-column-gap: 1.5rem;
+  align-items: center; 
+  font-size: 1.6rem;
+  color: var(--white-color);
+}
+
+.home__contact::before {
+  content: "";
+  height: 1px;
+  display: block;
+  background-color: currentColor;
+}
+  
+.home__contact-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+        @media only screen and (min-width: 1000px){
+            .home__contact {
+              width: 30px;
+              height: 30rem;
+              bottom: 0;
+              left: 5%;
+              grid-template-columns: 30px;
+              grid-template-rows: 50% 50%;
+            }
+            
+            .home__contact::before {
+              display: none;
+            }
+            
+            .home__contact::after {
+              content: "";
+              height: 100%;
+              display: block;
+              background-color: transparent;
+              border-left: 1px solid #F2F2F2;
+              transform: translateX(50%);
+          }
+            
+            .home__contact-icons {
+              flex-direction: column;
+              align-items: center;
+          }
+          
+            .home__contact-icons svg {
+              margin: 1rem;
+            }
+        }
