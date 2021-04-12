@@ -3,23 +3,23 @@ import {ReactComponent as ArrowBack} from '../img/arrow-ios-back-outline.svg';
 import {ReactComponent as Line} from '../img/Line.svg';
 
 
-const EndlessWinter = ({ history }) => (
+const KhanProject = ({ history }) => (
     
     <div className="project__id-content">
-        <div className="project__id-main" id="endless-winter">
+        <div className="project__id-main" id="khanproject">
             <ArrowBack style={{ cursor: "pointer", margin: "2rem 1.5rem"}} onClick={() => history.goBack()} /> 
             
             <div className="project__id-main-text">
                 <p style={{fontSize: "12px"}}>Featured Project</p>
-                <h4 className="mt-small">Endless Winter Webpage</h4>
-                <p className="mt-medium">A website presenting the Endless Winter company from Austria. The website was developed using several JavaScript libraries with Node JS and Express on the backend. All queries from the webpage are saved to the database and sent to the company’s email.</p>
+                <h4 className="mt-small">Khan.Project Portfolio Website</h4>
+                <p className="mt-medium">A website in two languages presenting the offer and portfolio of a Czech company providing architectural services. The webpage is connected to a database, which stores all the leads gathered from the contact form. The project was carried out in a dark minimalistic design.</p>
                 <ul className="project__id-main-text-list mt-big">
                     <li>HTML</li>
                     <li>CSS</li>
-                    <li>JS</li>
-                    <li>JQuery</li>
-                    <li>Pagepiling JS</li>
-                    <li>SweetAlert2 JS</li>
+                    <li>Vanilla JS</li>
+                    <li>Node JS</li>
+                    <li>Mongo DB</li>
+                    <li>CSS Grid Layout</li>
                 </ul>
             </div>
             
@@ -35,6 +35,6 @@ const EndlessWinter = ({ history }) => (
     
     );
     
-export default EndlessWinter;
+export default KhanProject;
 
     

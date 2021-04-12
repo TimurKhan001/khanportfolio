@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
+import Media from 'react-media';
 import "./Portfolio.css";
 import data from "./data/data";
 import Project from "./Project";
-import {CSSTransition, TransitionGroup} from 'react-transition-group';
+import {CSSTransition} from 'react-transition-group';
 import {ReactComponent as LeftBtn} from './img/arrowhead-left-outline.svg';
 import {ReactComponent as RightBtn} from './img/arrowhead-right-outline.svg';
+import SwitchProjects from "./SwitchProjects";
 
 class Portfolio extends Component {
     constructor(props) {
@@ -43,6 +45,13 @@ class Portfolio extends Component {
         const appear = this.state.appear;
         return (
             <div className="portfolio">
+                
+          
+            
+                <div className="project__id">
+                        <SwitchProjects />  
+                </div>
+            
                 <div className="portfolio__header">
                     <h4>02. Some things I've built</h4>
                 </div> 

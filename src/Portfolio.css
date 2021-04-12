@@ -32,9 +32,9 @@
 
 .portfolio__content-nav {
     position: absolute;
-    bottom: 1rem;
+    bottom: .5rem;
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,19 +49,35 @@
     transform: translateY(-50%);
 }
 
+                    @media only screen and (max-height: 600px) {
+                        .portfolio__content-nav-counter {
+                            display: none;
+                        } 
+                    }
+
 .project {
     width: 100%;
     position: absolute;
+    
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, );
+    grid-template-rows: repeat(3, min-content);
     grid-row-gap: 1.5rem;
 }
+
+                    @media only screen and (min-height: 700px) {
+                            .project {
+                                grid-row-gap: 5rem;
+                            }
+                        } 
+                       
+
 
 .project__img {
     padding: 1rem;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .project__img img {
@@ -70,7 +86,7 @@
 }
 
 .project__description {
-    padding: 0 0 0 2rem;
+    padding: 0 2rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -82,10 +98,10 @@
 }
 
 .project__id {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    z-index: 1000000000;
+    z-index: 10000;
 }
 
 .project__id-content {
@@ -95,9 +111,61 @@
     width: 100vw;
     height: 100vh;
     background-color: var(--secondary-color);
-    
 }
 
+.project__id-main {
+    width: 100%;
+    height: 70%;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: var(--white-color);
+    background-size: 100%;
+}
+
+#endless-winter {
+    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .95), rgba(13, 37 ,60, .95)), url('./img/EndlessWinterIdBackground.jpg');
+}
+
+#khanproject {
+    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .95), rgba(13, 37 ,60, .95)), url('./img/KhanProjectIdBackground.jpg');
+}
+
+#kamchatka {
+    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .95), rgba(13, 37 ,60, .95)), url('./img/KamchatkaIdBackground.jpg');
+}
+
+#unic {
+    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .95), rgba(13, 37 ,60, .95)), url('./img/UnicIdBackground.png');
+}
+
+#crypto {
+    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .95), rgba(13, 37 ,60, .95)), url('./img/CryptoIdBackground.png');
+}
+
+#reali {
+    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .95), rgba(13, 37 ,60, .95)), url('./img/RealiIdBackground.jpg');
+}
+
+#trillo {
+    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .95), rgba(13, 37 ,60, .95)), url('./img/TrilloIdBackground.png');
+}
+
+#todo {
+    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .95), rgba(13, 37 ,60, .95)), url('./img/ToDoIdBackground.png');
+}
+
+.project__id-main-text {
+    padding: 3rem;
+}
+
+.project__id-main-text-list {
+    columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+    list-style-position: inside;
+    font-size: 16px;
+    list-style-image: url('./img/checkmark-outline.svg');
+}
 
 /*Animation classes*/
 .fade-appear {
@@ -124,7 +192,6 @@
   transition: all .8s cubic-bezier(.26,1.34,.81,1.16);
 }
 
-
 .fade-exit {
   opacity: 1;
   right: 0;
@@ -140,3 +207,22 @@
   opacity: 0;
   z-index: 0;
 }
+
+.drop-enter {
+  top: -1200px;
+}
+
+.drop-enter.drop-enter-active {
+  top: 0;
+  transition: all 1s cubic-bezier(.26,1.34,.81,1.16);
+}
+
+.drop-exit {
+    top: 0;
+}
+
+.drop-exit, .drop-exit-active {
+    top: 2000px;
+    transition: all 1s ease-out;
+}
+

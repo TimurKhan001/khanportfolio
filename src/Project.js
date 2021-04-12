@@ -1,15 +1,14 @@
 import React from 'react';
-import SwitchProjects from "./SwitchProjects";
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
-import {Link, useParams, useRouteMatch} from 'react-router-dom';
+import {Link, useRouteMatch} from 'react-router-dom';
 
 const Slide = ({id, route, name, image, small_description }) => {
-    let { path, url } = useRouteMatch();
+    let { url } = useRouteMatch();
     return (
         
         <div className="project">
             <div className="project__img">
-            <img src={image} alt="image"/>
+            <img src={image} alt="project_mashup"/>
             </div>
             <div className="project__description">
             <h3>{name}</h3>

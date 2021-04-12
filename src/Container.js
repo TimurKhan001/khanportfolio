@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import {NavLink} from 'react-router-dom';
 import SwitchMainContent from "./SwitchMainContent";
-import SwitchProjects from "./SwitchProjects";
 
 class Container extends Component {
     constructor(props) {
@@ -73,10 +72,6 @@ class Container extends Component {
                 
                 <div className="main_content">
                     <SwitchMainContent />
-                    
-                    <div className="project__id">
-                        <SwitchProjects />  
-                     </div>
                 </div>
                 
             </div>

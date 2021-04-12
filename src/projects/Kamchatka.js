@@ -3,23 +3,21 @@ import {ReactComponent as ArrowBack} from '../img/arrow-ios-back-outline.svg';
 import {ReactComponent as Line} from '../img/Line.svg';
 
 
-const EndlessWinter = ({ history }) => (
+const Kamchatka = ({ history }) => (
     
     <div className="project__id-content">
-        <div className="project__id-main" id="endless-winter">
+        <div className="project__id-main" id="kamchatka">
             <ArrowBack style={{ cursor: "pointer", margin: "2rem 1.5rem"}} onClick={() => history.goBack()} /> 
             
             <div className="project__id-main-text">
                 <p style={{fontSize: "12px"}}>Featured Project</p>
-                <h4 className="mt-small">Endless Winter Webpage</h4>
-                <p className="mt-medium">A website presenting the Endless Winter company from Austria. The website was developed using several JavaScript libraries with Node JS and Express on the backend. All queries from the webpage are saved to the database and sent to the company’s email.</p>
+                <h4 className="mt-small">Kamchatka Tours Landing Page</h4>
+                <p className="mt-medium">A landing page presenting the offer of a Kamchatka travel agency. The project was built with only HTML and CSS with Sass extension. The website contains a lot of SVG elements, animations on hover, and a full-page scaling navigation menu.</p>
                 <ul className="project__id-main-text-list mt-big">
                     <li>HTML</li>
                     <li>CSS</li>
-                    <li>JS</li>
-                    <li>JQuery</li>
-                    <li>Pagepiling JS</li>
-                    <li>SweetAlert2 JS</li>
+                    <li>Sass</li>
+                    <li>Flexbox</li>
                 </ul>
             </div>
             
@@ -35,6 +33,6 @@ const EndlessWinter = ({ history }) => (
     
     );
     
-export default EndlessWinter;
+export default Kamchatka;
 
     

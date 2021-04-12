@@ -11,6 +11,18 @@
   margin-top: 1rem;
 }
 
+.mt-medium {
+  margin-top: 2rem;
+}
+
+.mt-big {
+  margin-top: 4rem;
+}
+
+.center {
+  margin: 0 auto;
+} 
+
 .desc-text {
   line-height: 185%;
 }
@@ -35,7 +47,7 @@ html {
 
 body {
   font-family: 'Nunito', sans-serif;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 
         @media only screen and (min-width: 1000px){
