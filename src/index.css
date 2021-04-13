@@ -50,7 +50,7 @@ body {
   overflow: hidden;
 }
 
-        @media only screen and (min-width: 1000px){
+        @media only screen and (min-width: 750px){
           body {
             padding: 2rem;
           }
@@ -101,7 +101,7 @@ a {
   background-size: cover;
 }
 
-        @media only screen and (min-width: 1000px){
+        @media only screen and (min-width: 750px){
           .App {
             border-radius: 5px;
             background-image: none;
@@ -120,7 +120,7 @@ a {
   display: none;
 }
 
-        @media only screen and (min-width: 1000px){
+        @media only screen and (min-width: 750px){
           .nav-mobile {
           display: none;
           }
@@ -325,11 +325,41 @@ a {
 
 }
 
-      @media only screen and (min-width: 1000px) {
+      @media only screen and (min-width: 750px) {
         .main_content {
+          position: relative;
           width: 100%;
           height: calc(100% - 128px);
         }
       }
       
 /*Transition animations*/
+
+.move-enter {
+  opacity: 0;
+  transform: translateX(5000px);
+ 
+}
+
+.move-enter.move-enter-active {
+ opacity: 1;
+ transform: translateX(0);
+ transition: all 800ms ease-in;
+}
+
+.move-exit {
+
+}
+
+.move-exit.move-exit-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.move-exit-done {
+  opacity: 0;
+}

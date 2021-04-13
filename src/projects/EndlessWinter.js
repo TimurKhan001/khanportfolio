@@ -1,11 +1,17 @@
 import React from 'react';
 import {ReactComponent as ArrowBack} from '../img/arrow-ios-back-outline.svg';
 import {ReactComponent as Line} from '../img/Line.svg';
+import Media from 'react-media';
 
 
 const EndlessWinter = ({ history }) => (
     
-    <div className="project__id-content">
+    <Media queries={{ small: "(max-width: 599px)" }}>
+        {matches =>
+            matches.small ? (    
+    
+        <div className="project__id-content">
+    
         <div className="project__id-main" id="endless-winter">
             <ArrowBack style={{ cursor: "pointer", margin: "2rem 1.5rem"}} onClick={() => history.goBack()} /> 
             
@@ -23,15 +29,24 @@ const EndlessWinter = ({ history }) => (
                 </ul>
             </div>
             
-        </div>
+            </div>
         
             <div className="btn btn-white center" >
                 <a href="#">Visit Page</a>
             </div>
             
             <Line style={{position: "absolute", bottom: ".5rem", left: "50%", transform: "translateX(-50%)"}} />
+            
+        </div>
         
-    </div>
+        ) : ( 
+        
+        <div className="project__id-laptop">
+            <ArrowBack style={{ cursor: "pointer", margin: "2rem 1.5rem"}} onClick={() => history.goBack()} /> 
+        </div>
+            )
+        }
+    </Media>
     
     );
     

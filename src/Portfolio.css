@@ -4,9 +4,18 @@
 }
 
 .portfolio {
+    /*position: absolute;*/
     height: calc(100vh - 100px);
     color: var(--primary-color);
 }
+
+                    @media only screen and (min-width: 1000px) {
+                        .portfolio {
+                        height: calc(100vh - 168px);
+
+                        color: var(--primary-color);
+                        }
+                    }
 
 .portfolio__header {
     display: flex;
@@ -92,6 +101,15 @@
     justify-content: flex-start;
 }
 
+                        @media only screen and (max-height: 600px) {
+                            .project__description h3 {
+                                font-size: 16px;
+                                text-transform: uppercase;
+                            }    
+                        }
+                    
+
+
 .project .btn {
     margin: 0 auto;
     color: var(--white-color);
@@ -121,6 +139,12 @@
     color: var(--white-color);
     background-size: 100%;
 }
+
+                        @media only screen and (max-height: 600px) {
+                            .project__id-main {
+                                height: 78%;
+                                } 
+                    }
 
 #endless-winter {
     background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .95), rgba(13, 37 ,60, .95)), url('./img/EndlessWinterIdBackground.jpg');
@@ -167,6 +191,26 @@
     list-style-image: url('./img/checkmark-outline.svg');
 }
 
+                    @media only screen and (max-height: 600px) {
+                        .project__id-main-text {
+                            padding: 0 2rem;
+                        }
+                        .project__id-main-text-list {
+                            font-size: 14px;
+                        }    
+                    }
+                    
+                    
+.project__id-laptop {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 10000;
+    background-color: var(--primary-color);
+}                    
+
+
 /*Animation classes*/
 .fade-appear {
   opacity: 0;
@@ -182,7 +226,7 @@
 
 .fade-enter {
   opacity: 0;
-  left: -500px;
+  left: -1000px;
   z-index: 1;
 }
 
@@ -199,7 +243,7 @@
 
 .fade-exit.fade-exit-active {
   opacity: 1;
-  right: -500px;
+  right: -1000px;
   transition: all .6s cubic-bezier(.3,1.22,.87,.94);
 }
 
@@ -225,4 +269,78 @@
     top: 2000px;
     transition: all 1s ease-out;
 }
+
+/*Laptop Portfolio Styles*/
+
+.portfolio__laptop {
+    color: white;
+}
+
+.portfolio__laptop-title {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr; 
+    grid-column-gap: 1.5rem;
+    align-items: center; 
+}
+
+.portfolio__laptop-title::before,
+.portfolio__laptop-title::after {
+        content: "";
+        height: 1px;
+        display: block;
+        background-color: currentColor;
+}
+
+.portfolio__laptop-content {
+    width: 100%;
+    height: calc(100vh - 190px);
+    padding: 0 3rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(400px, 1fr));
+    grid-template-rows: repeat(2, minmax(200px, 1fr));
+    grid-gap: 2rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.portfolio__laptop-content::-webkit-scrollbar {
+    background-color: var(--primary-color);
+    transition: all 2s linear;
+}
+
+.portfolio__laptop-content::-webkit-scrollbar-track {
+    margin: 0 3rem;
+}
+
+.portfolio__laptop-content::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 10px 10px #1C3343;
+    border: solid 3px transparent;
+    border-radius: 20px;
+}
+
+.portfolio__laptop-content::-webkit-scrollbar-thumb:hover {
+    box-shadow: inset 0 0 10px 10px #386BED;
+}
+
+.portfolio__laptop-project {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all .5s ease-out;
+}
+
+.portfolio__laptop-project img{
+    height: 60%;
+    object-fit: contain;
+}
+
+.portfolio__laptop-project:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+
+
 

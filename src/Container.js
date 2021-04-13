@@ -1,6 +1,7 @@
 import React, {Component} from "react";
-import {NavLink} from 'react-router-dom';
+import {NavLink, Route} from 'react-router-dom';
 import SwitchMainContent from "./SwitchMainContent";
+import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
 class Container extends Component {
     constructor(props) {
@@ -71,7 +72,12 @@ class Container extends Component {
                 </div>
                 
                 <div className="main_content">
+      
+                     
                     <SwitchMainContent />
+                    
+                         
+                    
                 </div>
                 
             </div>
