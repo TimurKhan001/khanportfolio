@@ -16,7 +16,7 @@ const SwitchProjects = () => (
     
     <Route render={({location}) => (
     
-        <TransitionGroup className="transition">
+        <TransitionGroup className="transition-projects">
             <CSSTransition
             key={location.key}
             timeout={1200}

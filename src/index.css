@@ -5,6 +5,7 @@
   --secondary-color: #386BED;
   --secondary-color-bright: #102CFF;
   --white-color: #F2F2F2;
+  --navheight: 100px;
 } 
 
 .mt-small {
@@ -126,8 +127,8 @@ a {
           }
   
         .nav-laptop {
-          height: 128px;
-          padding: 3rem 4rem;
+          height: var(--navheight);
+          padding: 1rem 4rem;
           border: none;
           display: flex;
           flex-direction: row;
@@ -147,7 +148,7 @@ a {
   
         .nav-laptop__link {
           display: inline-block;
-          margin: 0 1.5rem;
+          margin: 0 1rem;
           transition: all .3s ease-in; 
           }
   
@@ -363,3 +364,4 @@ a {
 .move-exit-done {
   opacity: 0;
 }
+
