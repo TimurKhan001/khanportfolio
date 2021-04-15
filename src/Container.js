@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {NavLink, Route} from 'react-router-dom';
 import SwitchMainContent from "./SwitchMainContent";
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
+import {ReactComponent as Logo} from './img/logo.svg';
 
 class Container extends Component {
     constructor(props) {
@@ -24,8 +25,8 @@ class Container extends Component {
             <div className="container">
                 
                 <div className="nav-laptop">
-                    
-                     <img className="nav-laptop__logo" src="logo.png" alt="logo"/>
+                
+                    <Logo className="nav-laptop__logo" />
                     
                     <nav className="nav-laptop__links">
                         <NavLink exact to="/" className="nav-laptop__link" activeClassName="nav-laptop__link-active">

@@ -1,6 +1,9 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {ReactComponent as ArrowBack} from '../img/arrow-ios-back-outline.svg';
 import {ReactComponent as Line} from '../img/Line.svg';
+import {ReactComponent as BackButton} from '../img/back_button.svg';
+import {ReactComponent as ForwardButton} from '../img/forward_button.svg';
 import Media from 'react-media';
 import Picture from "../img/EndlessWinter.png";
 
@@ -40,7 +43,7 @@ const EndlessWinter = ({ history }) => (
             
         </div>
         
-        ) : ( 
+    ) : ( 
         
         <div className="project__id-laptop">
             <div className="project__id-num"><h1>01.</h1></div> 
@@ -48,19 +51,31 @@ const EndlessWinter = ({ history }) => (
                 <img src={Picture} alt="endless_winter_webpage" />
                 <div className="project__id-laptop-content-text">
                     <p>Featured Project<br /><span>Endless Winter Webpage</span></p>
-                    <div className="project__id-laptop-content-tex-box">
+                    <div className="project__id-laptop-content-text-box mt-medium">
                         <p>A website presenting the Endless Winter company from Austria. The website was developed using several JavaScript libraries with Node JS and Express on the backend. All queries from the webpage are saved to the database and sent to the company’s email.</p>
                     </div>
-                    <ul className="project__id-main-text-list mt-big">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JS</li>
-                    <li>JQuery</li>
-                    <li>Pagepiling JS</li>
-                    <li>SweetAlert2 JS</li>
-                </ul>
+                    <div className="clear-float"></div>
+                    <ul className="project__id-main-text-list list-small mt-medium">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JS</li>
+                        <li>JQuery</li>
+                        <li>Pagepiling JS</li>
+                        <li>SweetAlert2 JS</li>
+                    </ul>
                 </div>
             </div>
+            
+            <Link className="project__id-laptop-button-back" to="/portfolio/todo_list">
+            <BackButton  />
+            </Link>
+             <div className="btn project__id-laptop-btn">
+            <a href="#">Visit Page</a>
+            </div>
+            <Link className="project__id-laptop-button-forward" to="/portfolio/khanproject">
+            <ForwardButton  />
+            </Link>
+            
         </div>
             )
         }

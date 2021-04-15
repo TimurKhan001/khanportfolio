@@ -328,6 +328,7 @@
 .portfolio__laptop-project img{
     height: 60%;
     object-fit: contain;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
 }
 
 .portfolio__laptop-project:hover {
@@ -344,16 +345,15 @@
     background-color: var(--primary-color);
     
     display: grid;
-    grid-template-columns: .3fr 1fr .3fr;
-    grid-template-rows: .3fr 1fr 1fr;
+    grid-template-columns: .2fr 1fr .2fr;
+    grid-template-rows: .2fr 1fr .2fr;
     grid-gap: 2rem;
 }  
 
 .project__id-num {
     grid-row: 1 / 2;
-    
     display: grid;
-    grid-template-columns: 50% 50% ; 
+    grid-template-columns: 50% 50%; 
     grid-column-gap: 1.5rem;
     color: var(--white-color);
     align-items: center;
@@ -367,21 +367,21 @@
 }
 
 .project__id-laptop-content {
-    grid-column: 2 / 3;
+    grid-column: 2 / 4;
     grid-row: 2 / 3;
+    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    
 }
 
 .project__id-laptop-content img {
-    margin: 10% 0;
     width: 60%;
     background-color: rgb(28, 51, 67);
+    mix-blend-mode: luminosity;
     opacity: .5;
-    transition: all .3s linear;
+    transition: all .5s ease-out;
     border: none;
     border-radius: 5px;
     filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
@@ -389,22 +389,147 @@
 
 .project__id-laptop-content img:hover {
     opacity: 1;
+    mix-blend-mode: initial;
 }
 
-                    @media only screen and (min-width: 1400px) {
-                        .project__id-laptop-content-text {
-                            margin: 10% 0;
-                            text-align: right;
-                    }
+.project__id-laptop-content-text {
+    width: 40%;
+    height: 80%;
+    text-align: right;
+    padding-right: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 111111111111111111111111;
+}
 
-                    .project__id-laptop-content-tex-box {
-                            margin-top: 10%;
-                            width: 120%;
+.project__id-laptop-content-text p {
+    line-height: 25px;
+}
+
+.project__id-laptop-content-text span {
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.list-small {
+    font-size: 12px;
+}
+
+.project__id-laptop-content-text-box {
+    width: 160%;
+    padding: 2rem 2rem;
+    background-color: #1C3343;
+    border-radius: 10px;
+    /*float: right;*/
+}
+
+.project__id-laptop-button-back {
+    grid-row: 3 / 4;
+    justify-self: center;
+    align-self: center;
+    transition: all .5s ease-out;
+}
+
+.project__id-laptop-btn {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    height: 60px;
+    margin-top: 0;
+    justify-self: center;
+    align-self: center;
+}
+
+.project__id-laptop-button-forward {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4; 
+    justify-self: center;
+    align-self: center;
+    transition: all .5s ease-out;
+}
+
+.project__id-laptop-button-forward:hover,
+.project__id-laptop-button-back:hover {
+    transform: scale(1.1);
+}
+
+                    @media only screen and (min-width: 600px) and (max-width: 1000px) {
+                        .project__id-laptop-content {
+                            grid-column: 2 / 4;
+                            grid-row: 2 / 3;
+                            flex-direction: column;
+                        }
+                        
+                        .project__id-laptop-content img {
+                            width: 90%;
+                        }
+                        
+                        .project__id-laptop-content-text {
+                            width: 100%;
+                            transform: translateY(-20%);    
+                        }
+                        
+                        .project__id-laptop-content-text-box {
+                            width: 100%;
+                        }
+                    }
+                    
+                    @media only screen and (min-width: 1200px) {
+                        
+                        .project__id-laptop { 
+                            grid-template-columns: .2fr 1fr .2fr;
+                            grid-template-rows: .3fr 1fr .3fr;
+                            grid-gap: 2rem;  
+                        }
+                        
+                        .project__id-laptop-content {
+                            grid-column: 2 / 3;
+                            grid-row: 1 / 3;
+                            padding: 4rem 0;
+                        }
+                        
+                        .project__id-laptop-content-text {
+                            padding-right: 0;
+                        }
+                        
+                        .project__id-laptop-button-back {
+                            align-self: start;
+                        }
+
+                        .project__id-laptop-btn {
+                            align-self: start;
+                        }                    
+
+                        .project__id-laptop-button-forward {
+                            align-self: start;
+                        }
+  
+                    }
+                    
+
+                    @media only screen and (min-width: 1400px) {
+                        
+                     .project__id-laptop { 
+                            grid-template-columns: .2fr 1fr .2fr;
+                            grid-template-rows: .2fr 1fr .2fr;
+                        }    
+                    
+                    .project__id-laptop-content {
+                            grid-column: 2 / 3;
+                            grid-row: 2 / 3;
+                            padding: 0;
+                        }    
+                        
+                    .project__id-laptop-content-text-box {
+                            width: 130%;
                             padding: 5rem 3rem;
-                            background-color: #1C3343;
-                            border-radius: 10px;
-                            transform: translateX(-15%);
                         }
                     }
     
 
+
+
+
+
+  

@@ -126,6 +126,11 @@
   font-size: 16px;
   font-weight: bold;
   filter: drop-shadow(2px 5px 5px rgba(0, 0, 0, 0.25));
+  transition: all .5s ease-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
 }
 
 .btn-white {

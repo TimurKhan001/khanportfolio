@@ -28,6 +28,10 @@
   line-height: 185%;
 }
 
+.clear-float {
+  clear: both;
+}
+
 *,
 *:before,
 *:after{
@@ -149,16 +153,17 @@ a {
         .nav-laptop__link {
           display: inline-block;
           margin: 0 1rem;
+          padding: .4rem .5rem;
           transition: all .3s ease-in; 
           }
   
         a.nav-laptop__link:hover {
-          transform: translateY(-3px) scale(1.2);
+          transform: translateY(-3px) scale(1.1);
           }
           
         .nav-laptop__link-active {
           border: 2px solid var(--white-color);
-          padding: .8rem;
+          padding: 1rem .5rem;
           border-radius: 5px;
         }  
         }

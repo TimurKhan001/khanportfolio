@@ -1,9 +1,18 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {ReactComponent as ArrowBack} from '../img/arrow-ios-back-outline.svg';
 import {ReactComponent as Line} from '../img/Line.svg';
+import {ReactComponent as BackButton} from '../img/back_button.svg';
+import {ReactComponent as ForwardButton} from '../img/forward_button.svg';
+import Media from 'react-media';
+import Picture from "../img/Reali.png"; 
 
 
 const Reali = ({ history }) => (
+    
+    <Media queries={{ small: "(max-width: 599px)" }}>
+        {matches =>
+            matches.small ? (  
     
     <div className="project__id-content">
         <div className="project__id-main" id="reali">
@@ -30,6 +39,43 @@ const Reali = ({ history }) => (
             <Line style={{position: "absolute", bottom: ".5rem", left: "50%", transform: "translateX(-50%)"}} />
         
     </div>
+    
+    ) : (
+    
+    <div className="project__id-laptop">
+        <div className="project__id-num"><h1>06.</h1></div> 
+            <div className="project__id-laptop-content">
+                <img src={Picture} alt="reali_landing_page" />
+                <div className="project__id-laptop-content-text">
+                    <p>Featured Project<br /><span>Reali Landing Page</span></p>
+                    <div className="project__id-laptop-content-text-box mt-medium">
+                        <p>Landing page for a real estate agency created with HTML, CSS and Sass extension. Entire layout is built using Grid Layout, which is the perfect choice for responsive web design. Layout changes depending on the device width.</p>
+                    </div>
+                    <div className="clear-float"></div>
+                    <ul className="project__id-main-text-list list-small mt-medium">
+                        <li>HTML</li>
+                        <li>Sass</li>
+                        <li>CSS Grid Layout</li>
+                        <li>Flexbox</li>
+                    </ul>
+                </div>
+            </div>
+            
+             <Link className="project__id-laptop-button-back" to="/portfolio/crypto_web">
+            <BackButton  />
+            </Link>
+             <div className="btn project__id-laptop-btn">
+            <a href="#">Visit Page</a>
+            </div>
+            <Link className="project__id-laptop-button-forward" to="/portfolio/trillo_page">
+            <ForwardButton  />
+            </Link>
+            
+        </div>
+            )
+        }
+    </Media>
+    
     
     );
     

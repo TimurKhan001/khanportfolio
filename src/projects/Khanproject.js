@@ -1,9 +1,18 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {ReactComponent as ArrowBack} from '../img/arrow-ios-back-outline.svg';
 import {ReactComponent as Line} from '../img/Line.svg';
+import {ReactComponent as BackButton} from '../img/back_button.svg';
+import {ReactComponent as ForwardButton} from '../img/forward_button.svg';
+import Media from 'react-media';
+import Picture from "../img/KhanProject.png"; 
 
 
 const KhanProject = ({ history }) => (
+    
+    <Media queries={{ small: "(max-width: 599px)" }}>
+        {matches =>
+            matches.small ? (    
     
     <div className="project__id-content">
         <div className="project__id-main" id="khanproject">
@@ -32,6 +41,44 @@ const KhanProject = ({ history }) => (
             <Line style={{position: "absolute", bottom: ".5rem", left: "50%", transform: "translateX(-50%)"}} />
         
     </div>
+    
+    ) : ( 
+    
+      <div className="project__id-laptop">
+            <div className="project__id-num"><h1>02.</h1></div> 
+            <div className="project__id-laptop-content">
+                <img src={Picture} alt="khanproject_portfolio_webpage" />
+                <div className="project__id-laptop-content-text">
+                    <p>Featured Project<br /><span>Khan.Project Portfolio Website</span></p>
+                    <div className="project__id-laptop-content-text-box mt-medium">
+                        <p>A website in two languages presenting the offer and portfolio of a Czech company providing architectural services. The webpage is connected to a database, which stores all the leads gathered from the contact form. The project was carried out in a dark minimalistic design.</p>
+                    </div>
+                    <div className="clear-float"></div>
+                    <ul className="project__id-main-text-list list-small mt-medium">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Vanilla JS</li>
+                        <li>Node JS</li>
+                        <li>Mongo DB</li>
+                        <li>CSS Grid Layout</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <Link className="project__id-laptop-button-back" to="/portfolio/endless_winter_project">
+            <BackButton  />
+            </Link>
+             <div className="btn project__id-laptop-btn">
+            <a href="#">Visit Page</a>
+            </div>
+            <Link className="project__id-laptop-button-forward" to="/portfolio/kamchatka_tours">
+            <ForwardButton  />
+            </Link>
+            
+        </div>
+            )
+        }
+    </Media>
     
     );
     
