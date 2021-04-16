@@ -8,16 +8,13 @@ import Home from './Home';
 import Portfolio from './Portfolio';
 import Services from './Services';
 import About from './About';
-
-const Contact = () => (<div className="contact"><h2>Contact</h2></div>);
+import Contact from "./Contact";
 
 const SwitchMainContent = () => (
     
     <Media queries={{ small: "(max-width: 599px)" }}>
         {matches =>
             matches.small ? (    
-    
-            
     
         <Switch>
             <Route exact path="/" component={Home} />

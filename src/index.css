@@ -28,6 +28,11 @@
   clear: both;
 }
 
+.project__transition {
+  width: inherit;
+  height: inherit;
+}
+
 *,
 *:before,
 *:after{
@@ -50,14 +55,12 @@ html {
 
 body {
   font-family: 'Nunito', sans-serif;
-  overflow: hidden;
 }
 
         @media only screen and (min-width: 750px) {
           body {
             padding: 2rem;
-           
-            
+            overflow: hidden;
           }
         }
 

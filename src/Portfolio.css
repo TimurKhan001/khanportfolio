@@ -3,7 +3,8 @@
     width: 100%;
 }
 
-.portfolio {
+.portfolio,
+.portfolio__mobile {
     height: calc(100vh - 100px);
     color: var(--primary-color);
 }
@@ -70,7 +71,7 @@
 .project {
     width: 100%;
     max-height: 100%;
-    position: absolute;
+    /*position: absolute;*/
     
     display: grid;
     grid-template-columns: 1fr;
@@ -116,6 +117,7 @@
 
 .project .btn {
     margin: 0 auto;
+    align-self: center;
     color: var(--white-color);
 }
 

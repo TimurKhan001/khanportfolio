@@ -1,8 +1,10 @@
 import React from 'react';
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
 import {Link, useRouteMatch} from 'react-router-dom';
+import {ReactComponent as LeftBtn} from './img/arrowhead-left-outline.svg';
+import {ReactComponent as RightBtn} from './img/arrowhead-right-outline.svg';
 
-const Slide = ({id, route, name, image, small_description }) => {
+const Slide = ({id, route, name, image, small_description, number, clickLeft, clickRight}) => {
     let { url } = useRouteMatch();
     return (
         
@@ -17,11 +19,16 @@ const Slide = ({id, route, name, image, small_description }) => {
             <div className="btn" >
                  <Link to={`${url}/${route}`}>View Project</Link>
             </div>
+            <div className="portfolio__content-nav">
+                <LeftBtn onClick={() => clickLeft()} style={{cursor: "pointer"}} />
+                <h4 className="portfolio__content-nav-counter">{id} of {number} </h4>
+                <RightBtn onClick={() => clickRight()} style={{cursor: "pointer"}} />
+            </div>
         </div>   
     );
 };
 
-const Project = ({id, route, name, image, small_description, }) => {
+const Project = ({id, route, name, image, small_description, number, clickLeft, clickRight}) => {
     return (
         <TransitionGroup className="project__transition">
             <CSSTransition
@@ -29,7 +36,7 @@ const Project = ({id, route, name, image, small_description, }) => {
             timeout={1000}
             classNames="fade"
             >
-                <Slide key={id} route={route} name={name} small_description={small_description} image={image} />
+                <Slide key={id} id={id} route={route} name={name} small_description={small_description} image={image} number={number}  clickLeft={clickLeft} clickRight={clickRight} />
             </CSSTransition>
         </TransitionGroup>
     )

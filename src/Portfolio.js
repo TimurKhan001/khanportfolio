@@ -105,14 +105,12 @@ class Portfolio extends Component {
                                     appear={false}
                                     timeout={1000}
                                     classNames="fade">
-                                        <Project id={id} route={route} name={name} small_description={small_description} image={image} />
+                                        <Project id={id} route={route} name={name} small_description={small_description} image={image} number={number} clickLeft={this.prevProperty} clickRight={this.nextProperty}/>
                                 </CSSTransition>
+                                
+
                             </div>
-                            <div className="portfolio__content-nav">
-                                <LeftBtn onClick={() => this.prevProperty()} style={{cursor: "pointer"}} />
-                                <h4 className="portfolio__content-nav-counter">{id} of {number} </h4>
-                                <RightBtn onClick={() => this.nextProperty()} style={{cursor: "pointer"}} />
-                            </div>
+                            
                         </div>
                     ) : (
                         <div className="portfolio__laptop">

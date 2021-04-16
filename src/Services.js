@@ -3,7 +3,7 @@ import Media from 'react-media';
 import "./Services.css";
 import data from "./data/data";
 import Service from "./Service";
-import Div100vh from 'react-div-100vh';
+
 
 class Services extends Component {
     constructor(props) {
@@ -49,7 +49,7 @@ class Services extends Component {
             <Media queries={{ small: "(max-width: 599px)" }}>
                 {matches =>
                     matches.small ? (    
-                    <Div100vh className="services__mobile"> 
+                    <div className="services__mobile"> 
                         <div className="services__mobile-header">
                             <h4>03. Services</h4>
                         </div>
@@ -57,7 +57,7 @@ class Services extends Component {
                         <Service key={id} number={number} name={name} description={description} cards={cards} clickLeft={this.prevService} clickRight={this.nextService} />
 
                     
-                    </Div100vh>
+                    </div>
                     
                     ) : (
                     
