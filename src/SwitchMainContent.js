@@ -6,9 +6,9 @@ import {
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 import Home from './Home';
 import Portfolio from './Portfolio';
+import Services from './Services';
+import About from './About';
 
-const Services = () => (<div className="services"><h2>Services</h2></div>);
-const About = () => (<div className="about"><h2>About</h2></div>);
 const Contact = () => (<div className="contact"><h2>Contact</h2></div>);
 
 const SwitchMainContent = () => (

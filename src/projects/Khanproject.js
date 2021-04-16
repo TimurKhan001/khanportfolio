@@ -6,6 +6,7 @@ import {ReactComponent as BackButton} from '../img/back_button.svg';
 import {ReactComponent as ForwardButton} from '../img/forward_button.svg';
 import Media from 'react-media';
 import Picture from "../img/KhanProject.png"; 
+import Div100vh from 'react-div-100vh';
 
 
 const KhanProject = ({ history }) => (
@@ -14,7 +15,7 @@ const KhanProject = ({ history }) => (
         {matches =>
             matches.small ? (    
     
-    <div className="project__id-content">
+    <Div100vh className="project__id-content">
         <div className="project__id-main" id="khanproject">
             <ArrowBack style={{ cursor: "pointer", margin: "2rem 1.5rem"}} onClick={() => history.goBack()} /> 
             
@@ -34,13 +35,15 @@ const KhanProject = ({ history }) => (
             
         </div>
         
-            <div className="btn btn-white center" >
-                <a href="#">Visit Page</a>
+            <div className="project__id-bottom">
+                <div className="btn btn-white" >
+                    <a href="#">Visit Page</a>
+                </div>
             </div>
             
             <Line style={{position: "absolute", bottom: ".5rem", left: "50%", transform: "translateX(-50%)"}} />
         
-    </div>
+    </Div100vh>
     
     ) : ( 
     
@@ -54,7 +57,7 @@ const KhanProject = ({ history }) => (
                         <p>A website in two languages presenting the offer and portfolio of a Czech company providing architectural services. The webpage is connected to a database, which stores all the leads gathered from the contact form. The project was carried out in a dark minimalistic design.</p>
                     </div>
                     <div className="clear-float"></div>
-                    <ul className="project__id-main-text-list list-small mt-medium">
+                    <ul className="project__id-laptop-content-text-list list-small mt-medium">
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>Vanilla JS</li>

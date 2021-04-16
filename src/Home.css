@@ -5,7 +5,7 @@
   height: 70px;
   position: absolute;
   top: 10rem;
-  right: 5.2rem;
+  right: 4.2rem;
   animation: move 1s infinite;
 }
 
@@ -32,8 +32,8 @@
   width: 100%;
   height: 100%;
   color: var(--white-color);
-  margin-top: 9rem;
-  padding: 0 4rem;
+  margin-top: 6rem;
+  padding: 0 2rem;
 }      
         @media only screen and (max-height: 600px) {
           .home {
@@ -115,7 +115,7 @@
         }
 
 .btn {
-  margin-top: 2rem;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,7 +140,7 @@
 
         @media only screen and (min-width: 1500px){
             .btn {
-              margin-top: 8rem;
+              margin-top: 6rem;
               width: 18rem;
               height: 8rem;
             }

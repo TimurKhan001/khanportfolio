@@ -24,10 +24,6 @@
   margin: 0 auto;
 } 
 
-.desc-text {
-  line-height: 185%;
-}
-
 .clear-float {
   clear: both;
 }
@@ -43,11 +39,13 @@
 body, html, #root {
   height: 100%;
   width: 100%;
+
 }
 
 html {
   font-size: 62.5%;
   background-color: var(--white-color);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -58,6 +56,8 @@ body {
         @media only screen and (min-width: 750px) {
           body {
             padding: 2rem;
+           
+            
           }
         }
 
@@ -79,6 +79,12 @@ h4 {
 
 p {
   font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 125%;
+    /* or 125% */
+  letter-spacing: 0.05em;
 }
 
 a {
@@ -170,9 +176,9 @@ a {
 
 .navigation__logo {
   height: 4rem;
-  position: fixed;
+  position: absolute;
   top: 4rem;
-  left: 4rem;
+  left: 2rem;
   z-index: 10000;
 }
 
@@ -184,9 +190,9 @@ a {
   background-color: var(--primary-color);
   height: 6rem;
   width: 6rem;
-  position: fixed;
+  position: absolute;
   top: 3rem;
-  right: 3rem;
+  right: 2rem;
   border-radius: 10px;
   z-index: 2000;
   box-shadow: 0 1rem 3rem rgba(15, 15, 15, .2);
@@ -198,18 +204,19 @@ a {
   height: 6rem;
   width: 6rem;
   border-radius: 50%;
-  position: fixed;
+  position: absolute;
   top: 3rem;
-  right: 3rem;
+  right: 2rem;
   background-color: var(--secondary-color-bright);
   z-index: 1000;
   transition: all .3s cubic-bezier(0.86, 0, 0.07, 1);
+  overflow: hidden;
 }
 
 .navigation__nav {
   height: 100%;
         
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 1500;
@@ -244,6 +251,7 @@ a {
   color: var(--white-color);
   text-decoration: none;
   font-weight: bold;
+  text-underline-offset: 5px;
 }
 
 .navigation__checkbox:checked ~ .navigation__background {
@@ -308,13 +316,16 @@ a {
   padding: 0 4rem;
   position: absolute;
   bottom: 5%;
-  width: 100vw;
+  width: 100%;
   
   display: grid;
   grid-template-columns: max-content 1fr; 
   grid-column-gap: 1.5rem;
   align-items: center; 
-  font-size: 1.6rem;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  
   color: var(--white-color);
 }
 
@@ -330,6 +341,29 @@ a {
   /*Might add height 100%*/
 
 }
+
+.mobile__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem 5rem 2rem;
+    background-color: var(--secondary-color);
+    border-radius: 30px 30px 0 0;
+}
+
+.mobile__header h4 {
+    font-weight: bold;
+    color: #F2F2F2;
+}
+
+.mobile__content {
+    width: 100%;
+    height: calc(100vh - 162px);
+    border-radius: 30px 30px 0 0;
+    background-color: var(--white-color);
+    transform: translateY(-3rem);
+}
+
 
       @media only screen and (min-width: 750px) {
         .main_content {

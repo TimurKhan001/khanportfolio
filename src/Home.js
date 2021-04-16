@@ -12,7 +12,7 @@ const Home = () => (
         </div>
         <h3>Hi,<br /> I’m Tim,</h3>
         <h2>A full-stack<br /> web developer</h2>
-        <div className="btn">
+        <div className="btn mt-medium">
             <a href="#">Get In Touch</a>
         </div>
         

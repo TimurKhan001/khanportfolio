@@ -5,7 +5,8 @@ import {ReactComponent as Line} from '../img/Line.svg';
 import {ReactComponent as BackButton} from '../img/back_button.svg';
 import {ReactComponent as ForwardButton} from '../img/forward_button.svg';
 import Media from 'react-media';
-import Picture from "../img/Trillo.png"; 
+import Picture from "../img/Trillo.png";
+import Div100vh from 'react-div-100vh';
 
 
 const Trillo = ({ history }) => (
@@ -14,7 +15,7 @@ const Trillo = ({ history }) => (
         {matches =>
             matches.small ? (  
     
-    <div className="project__id-content">
+    <Div100vh className="project__id-content">
         <div className="project__id-main" id="trillo">
             <ArrowBack style={{ cursor: "pointer", margin: "2rem 1.5rem"}} onClick={() => history.goBack()} /> 
             
@@ -31,13 +32,15 @@ const Trillo = ({ history }) => (
             
         </div>
         
-            <div className="btn btn-white center" >
-                <a href="#">Visit Page</a>
+            <div className="project__id-bottom">
+                <div className="btn btn-white" >
+                    <a href="#">Visit Page</a>
+                </div>
             </div>
             
             <Line style={{position: "absolute", bottom: ".5rem", left: "50%", transform: "translateX(-50%)"}} />
         
-    </div>
+    </Div100vh>
 
     ) : (
     
@@ -51,7 +54,7 @@ const Trillo = ({ history }) => (
                         <p>A single page design for a Trillo project. Entire layout was constructed with CSS Flexbox.</p>
                     </div>
                     <div className="clear-float"></div>
-                    <ul className="project__id-main-text-list list-small mt-medium">
+                    <ul className="project__id-laptop-content-text-list list-small mt-medium">
                         <li>HTML</li>
                         <li>Sass</li>
                         <li>Flexbox</li>

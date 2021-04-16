@@ -12,7 +12,7 @@ const Slide = ({id, route, name, image, small_description }) => {
             </div>
             <div className="project__description">
             <h3>{name}</h3>
-            <p className="mt-small desc_text">{small_description}</p>
+            <p className="mt-small ">{small_description}</p>
             </div>
             <div className="btn" >
                  <Link to={`${url}/${route}`}>View Project</Link>
