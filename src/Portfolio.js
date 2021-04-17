@@ -1,15 +1,13 @@
 import React, {Component} from 'react';
 import Media from 'react-media';
-import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import "./Portfolio.css";
 import data from "./data/data";
 import Project from "./Project";
 import {CSSTransition} from 'react-transition-group';
-import {ReactComponent as LeftBtn} from './img/arrowhead-left-outline.svg';
-import {ReactComponent as RightBtn} from './img/arrowhead-right-outline.svg';
+import {ReactComponent as LeftBtn} from './img/arrowhead-left-outline_1.svg';
+import {ReactComponent as RightBtn} from './img/arrowhead-right-outline_1.svg';
 import SwitchProjects from "./SwitchProjects";
 import {Link, useRouteMatch} from 'react-router-dom';
-
 
 const ProjectLaptop = ({ route, image, name}) => {
     
@@ -59,11 +57,7 @@ class Portfolio extends Component {
       this.setState(change);
     }
     
-    
-    componentDidMount() {
-        console.log(this.divRef.current);
-    }
-  
+
     render(){
         
         const onWheel = (e) => {
@@ -76,9 +70,7 @@ class Portfolio extends Component {
             };
         
         const {id, route, name, small_description, image} = this.state.project;
-            const number = data.projects.length;
-            const appear = this.state.appear;
-            
+
             const projects = this.state.projects.map((item, index) => (
                 
                 <ProjectLaptop key={index} route={item.route} image={item.image} name={item.name} />
@@ -96,22 +88,15 @@ class Portfolio extends Component {
                             <div className="project__id">
                                 <SwitchProjects />  
                             </div>
-                            <div className="portfolio__header">
+                            <div className="portfolio__mobile-header">
+                                <LeftBtn onClick={() => this.prevProperty()} style={{cursor: "pointer"}} />
                                 <h4>02. Some things I've built</h4>
+                                <RightBtn onClick={() => this.nextProperty()} style={{cursor: "pointer"}} />
                             </div> 
-                            <div className="portfolio__content">
-                                <CSSTransition
-                                    in={appear}
-                                    appear={false}
-                                    timeout={1000}
-                                    classNames="fade">
-                                        <Project id={id} route={route} name={name} small_description={small_description} image={image} number={number} clickLeft={this.prevProperty} clickRight={this.nextProperty}/>
-                                </CSSTransition>
-                                
-
-                            </div>
+                               
+                                <Project id={id} route={route} name={name} small_description={small_description} image={image}/>
                             
-                        </div>
+                            </div>
                     ) : (
                         <div className="portfolio__laptop">
                             <div className="project__id">

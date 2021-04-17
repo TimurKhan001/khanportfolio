@@ -49,7 +49,8 @@ class Contact extends Component {
                                 
                             </form>
                             
-                            <div className="home__contact" style={{color: "black"}}>
+                            
+                            <div className="home__contact" style={{color: "white"}}>
                                 <div className="home__contact-icons">
                                 <GitLogo style={{color: "black"}}/>
                                 <LinkedLogo />

@@ -1,11 +1,12 @@
 import React from "react";
 import Container from "./Container";
+import Div100vh from 'react-div-100vh';
 
 function App() {
   return (
-    <div className="App">
+    <Div100vh className="App">
       <Container />
-    </div>
+    </Div100vh>
   );
 }
 

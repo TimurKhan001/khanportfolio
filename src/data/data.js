@@ -101,8 +101,8 @@ const data = {
                     }
                 ]
             
-        },
-                {
+            },
+            {
             "id": 2,
             "number": "02",
             "name": "PSD To HTML",
