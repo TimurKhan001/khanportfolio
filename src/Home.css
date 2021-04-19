@@ -148,8 +148,10 @@
 
 .home__contact {
   position: absolute;
+  /*left: 50%;*/
+  /*transform: translateX(-50%);*/
   bottom: 5%;
-  width: 80%;
+  width: 90%;
   
   display: grid;
   grid-template-columns: 50% 50% ; 

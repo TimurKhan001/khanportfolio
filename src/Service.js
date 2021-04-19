@@ -1,7 +1,25 @@
 import React from 'react';
 import useWindowDimensions from "./WindowDimension.js";
+import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
-const Service = ({number, name, description, cards, clickLeft, clickRight}) => {
+const Service = ({id, number, name, description, cards}) => {
+    return (
+            <TransitionGroup className="transition">
+                <CSSTransition
+                key={id}
+                timeout={800}
+                classNames="fade"
+                >
+                    <ServiceContent key={id} id={id} number={number} name={name} description={description} cards={cards}/>
+        
+            </CSSTransition>
+            </TransitionGroup> 
+    
+    );
+};
+
+
+const ServiceContent = ({id, number, name, description, cards}) => {
     
     const { height } = useWindowDimensions();
     

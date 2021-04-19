@@ -3,7 +3,6 @@ import {NavLink, Route} from 'react-router-dom';
 import SwitchMainContent from "./SwitchMainContent";
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
 import {ReactComponent as Logo} from './img/logo.svg';
-import Div100vh from 'react-div-100vh';
 
 class Container extends Component {
     constructor(props) {
@@ -23,7 +22,7 @@ class Container extends Component {
         // const defaultStyle = {textDecoration: 'none'};
        let checkbox = this.inputRef;
         return(
-            <Div100vh className="container">
+            <div className="container">
                 
                 <div className="nav-laptop">
                 
@@ -82,7 +81,7 @@ class Container extends Component {
                     
                 </div>
                 
-            </Div100vh>
+            </div>
         );
     }
 }

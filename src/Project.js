@@ -4,10 +4,14 @@ import {Link, useRouteMatch} from 'react-router-dom';
 import useWindowDimensions from "./WindowDimension.js";
 
 
+
 const Slide = ({id, route, name, image, small_description}) => {
     let { url } = useRouteMatch();
     const { height } = useWindowDimensions();
     return (
+        
+ 
+        
         
         <div style={{height: height - 162}} className="portfolio__mobile-content">
             <div className="portfolio__mobile__img">
@@ -20,16 +24,27 @@ const Slide = ({id, route, name, image, small_description}) => {
             <div className="btn" >
                  <Link to={`${url}/${route}`}>View Project</Link>
             </div>
-        </div>   
+        </div>  
+        
+  
+    
     );
 };
 
 const Project = ({id, route, name, image, small_description}) => {
     return (
       
+        <TransitionGroup className="transition">
+        <CSSTransition
+            key={id}
+            timeout={800}
+            classNames="fade"
+            >
 
         <Slide key={id} id={id} route={route} name={name} small_description={small_description} image={image} />
-            
+        
+        </CSSTransition>
+        </TransitionGroup>       
       
     );
 };

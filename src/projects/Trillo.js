@@ -8,7 +8,6 @@ import Media from 'react-media';
 import Picture from "../img/Trillo.png";
 import Div100vh from 'react-div-100vh';
 
-
 const Trillo = ({ history }) => (
     
     <Media queries={{ small: "(max-width: 599px)" }}>
@@ -22,9 +21,10 @@ const Trillo = ({ history }) => (
             <div className="project__id-main-text">
                 <p style={{fontSize: "12px"}}>Featured Project</p>
                 <h4 className="mt-small">Trillo Web Page</h4>
-                <p className="mt-medium">A single page design for a Trillo project. Entire layout was constructed with CSS Flexbox.</p>
+                <p className="mt-medium">A single web page for a Booking.com app clone, created with HTML, CSS and Sass extension. Entire layout is built using CSS Flexbox, which makes the page fully responsive.</p>
                 <ul className="project__id-main-text-list mt-big">
                     <li>HTML</li>
+                    <li>CSS</li>
                     <li>Sass</li>
                     <li>Flexbox</li>
                 </ul>
@@ -51,11 +51,12 @@ const Trillo = ({ history }) => (
                 <div className="project__id-laptop-content-text">
                     <p>Featured Project<br /><span>Trillo Web Page</span></p>
                     <div className="project__id-laptop-content-text-box mt-medium">
-                        <p>A single page design for a Trillo project. Entire layout was constructed with CSS Flexbox.</p>
+                        <p>A single web page for a Booking.com app clone, created with HTML, CSS and Sass extension. Entire layout is built using CSS Flexbox, which makes the page fully responsive.</p>
                     </div>
                     <div className="clear-float"></div>
                     <ul className="project__id-laptop-content-text-list list-small mt-medium">
                         <li>HTML</li>
+                        <li>CSS</li>
                         <li>Sass</li>
                         <li>Flexbox</li>
                     </ul>
@@ -81,5 +82,3 @@ const Trillo = ({ history }) => (
     );
     
 export default Trillo;
-
-    

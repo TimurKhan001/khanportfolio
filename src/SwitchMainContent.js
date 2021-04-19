@@ -14,7 +14,9 @@ const SwitchMainContent = () => (
     
     <Media queries={{ small: "(max-width: 599px)" }}>
         {matches =>
-            matches.small ? (    
+            matches.small ? (   
+            
+
     
         <Switch>
             <Route exact path="/" component={Home} />
@@ -23,9 +25,8 @@ const SwitchMainContent = () => (
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
         </Switch>
-    
-      
         
+
             ) : ( 
             
         <Route render={({location}) => (

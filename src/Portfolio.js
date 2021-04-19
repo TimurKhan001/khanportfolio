@@ -8,6 +8,8 @@ import {ReactComponent as LeftBtn} from './img/arrowhead-left-outline_1.svg';
 import {ReactComponent as RightBtn} from './img/arrowhead-right-outline_1.svg';
 import SwitchProjects from "./SwitchProjects";
 import {Link, useRouteMatch} from 'react-router-dom';
+import { Swipeable } from 'react-touch';
+
 
 const ProjectLaptop = ({ route, image, name}) => {
     
@@ -29,7 +31,8 @@ class Portfolio extends Component {
     this.state = {
         appear: true,
         project: data.projects[0],
-        projects: data.projects
+        projects: data.projects,
+        XValue1: 0,
     };
     
     this.divRef = React.createRef();
@@ -57,8 +60,21 @@ class Portfolio extends Component {
       this.setState(change);
     }
     
+    handleTouchStart = (event) => {
+        this.setState({ XValue1: event.changedTouches[0].screenX});
+    }
 
+    handleTouchEnd = (event) => {
+    if(event.changedTouches[0].screenX > this.state.XValue1 && event.changedTouches[0].screenX - this.state.XValue1 > 50) {
+            this.prevProperty();
+        } else if (event.changedTouches[0].screenX < this.state.XValue1 && this.state.XValue1 - event.changedTouches[0].screenX > 50){
+            this.nextProperty();
+        }
+    }
+    
     render(){
+        
+        const appear = this.state.appear;
         
         const onWheel = (e) => {
             const container = this.divRef.current;
@@ -77,6 +93,21 @@ class Portfolio extends Component {
                
                 ));
         
+        let first;
+        let second;
+                
+        const func1 = ((event) => {
+            console.log("move", event.changedTouches[0].screenX);
+            first = event.changedTouches[0].screenX;
+            console.log(first);
+        });
+        
+       
+        
+        const func2 = ((event) => {
+            console.log("move", event.changedTouches[0].screenX);
+        });
+        
         return (
             
         <div className="portfolio">
@@ -84,7 +115,7 @@ class Portfolio extends Component {
             <Media queries={{ small: "(max-width: 599px)" }}>
                 {matches =>
                     matches.small ? (
-                        <div className="portfolio__mobile">              
+                        <div onTouchStart={this.handleTouchStart} onTouchEnd={this.handleTouchEnd} className="portfolio__mobile">              
                             <div className="project__id">
                                 <SwitchProjects />  
                             </div>
@@ -93,10 +124,18 @@ class Portfolio extends Component {
                                 <h4>02. Some things I've built</h4>
                                 <RightBtn onClick={() => this.nextProperty()} style={{cursor: "pointer"}} />
                             </div> 
-                               
-                                <Project id={id} route={route} name={name} small_description={small_description} image={image}/>
                             
-                            </div>
+                              
+                            <CSSTransition
+                                in={appear}
+                                appear={false}
+                                timeout={800}
+                                classNames="fade"
+                            >
+                                <Project id={id} route={route} name={name} small_description={small_description} image={image}/>
+                            </CSSTransition>
+    
+                        </div>
                     ) : (
                         <div className="portfolio__laptop">
                             <div className="project__id">

@@ -4,6 +4,7 @@ import {ReactComponent as GitLogo} from './img/github-outline.svg';
 import {ReactComponent as LinkedLogo} from './img/linkedin-outline.svg';
 import {ReactComponent as EmailLogo} from './img/email-outline.svg';
 import {ReactComponent as ClickMe} from './img/ClickMe.svg';
+
 const Home = () => (
     
     <div className="home">

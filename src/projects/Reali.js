@@ -8,7 +8,6 @@ import Media from 'react-media';
 import Picture from "../img/Reali.png";
 import Div100vh from 'react-div-100vh';
 
-
 const Reali = ({ history }) => (
     
     <Media queries={{ small: "(max-width: 599px)" }}>
@@ -26,7 +25,7 @@ const Reali = ({ history }) => (
                 <ul className="project__id-main-text-list mt-big">
                     <li>HTML</li>
                     <li>Sass</li>
-                    <li>CSS Grid Layout</li>
+                    <li>CSS Grid</li>
                     <li>Flexbox</li>
                 </ul>
             </div>
@@ -58,7 +57,7 @@ const Reali = ({ history }) => (
                     <ul className="project__id-laptop-content-text-list list-small mt-medium">
                         <li>HTML</li>
                         <li>Sass</li>
-                        <li>CSS Grid Layout</li>
+                        <li>CSS Grid</li>
                         <li>Flexbox</li>
                     </ul>
                 </div>

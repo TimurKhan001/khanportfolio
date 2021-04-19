@@ -8,7 +8,6 @@ import Media from 'react-media';
 import Picture from "../img/KhanProject.png"; 
 import Div100vh from 'react-div-100vh';
 
-
 const KhanProject = ({ history }) => (
     
     <Media queries={{ small: "(max-width: 599px)" }}>
@@ -22,14 +21,14 @@ const KhanProject = ({ history }) => (
             <div className="project__id-main-text">
                 <p style={{fontSize: "12px"}}>Featured Project</p>
                 <h4 className="mt-small">Khan.Project Portfolio Website</h4>
-                <p className="mt-medium">A website in two languages presenting the offer and portfolio of a Czech company providing architectural services. The webpage is connected to a database, which stores all the leads gathered from the contact form. The project was carried out in a dark minimalistic design.</p>
+                <p className="mt-medium">A website in two languages presenting the offer and portfolio of a Czech company providing architectural services. The website is connected to a database, which stores all the leads gathered from the contact form. The project was carried out in a dark minimalistic design.</p>
                 <ul className="project__id-main-text-list mt-big">
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>Vanilla JS</li>
                     <li>Node JS</li>
                     <li>Mongo DB</li>
-                    <li>CSS Grid Layout</li>
+                    <li>CSS Grid</li>
                 </ul>
             </div>
             
@@ -54,7 +53,7 @@ const KhanProject = ({ history }) => (
                 <div className="project__id-laptop-content-text">
                     <p>Featured Project<br /><span>Khan.Project Portfolio Website</span></p>
                     <div className="project__id-laptop-content-text-box mt-medium">
-                        <p>A website in two languages presenting the offer and portfolio of a Czech company providing architectural services. The webpage is connected to a database, which stores all the leads gathered from the contact form. The project was carried out in a dark minimalistic design.</p>
+                        <p>A website in two languages presenting the offer and portfolio of a Czech company providing architectural services. The website is connected to a database, which stores all the leads gathered from the contact form. The project was carried out in a dark minimalistic design.</p>
                     </div>
                     <div className="clear-float"></div>
                     <ul className="project__id-laptop-content-text-list list-small mt-medium">
@@ -63,7 +62,7 @@ const KhanProject = ({ history }) => (
                         <li>Vanilla JS</li>
                         <li>Node JS</li>
                         <li>Mongo DB</li>
-                        <li>CSS Grid Layout</li>
+                        <li>CSS Grid</li>
                     </ul>
                 </div>
             </div>

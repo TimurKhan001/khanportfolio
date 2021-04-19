@@ -77,7 +77,7 @@ const data = {
     "services": [
         {
             "id": 1,
-            "number": "01",
+            "number": "01.",
             "name": "Web Development",
             "description": "I build fully responsive websites and web apps that comply with all the latest standards.",
             "cards": [
@@ -104,7 +104,7 @@ const data = {
             },
             {
             "id": 2,
-            "number": "02",
+            "number": "02.",
             "name": "PSD To HTML",
             "description": "I offer pixel-perfect conversion of your design to HTML/CSS code ensuring 100% accuracy in each pixel.",
             "cards": [
@@ -116,7 +116,7 @@ const data = {
                     },
                      {
                         "id": 2,
-                        "name": "SEO Friendly",
+                        "name": "SEO\n Friendly",
                         "img": Search,
                         "desc": "I create code which gives a SEO boost."
                     },

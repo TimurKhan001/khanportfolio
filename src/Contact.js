@@ -1,21 +1,16 @@
 import React, {Component} from 'react';
 import Media from 'react-media'; 
 import "./Contact.css";
-import {ReactComponent as GitLogo} from './img/github-outline.svg';
-import {ReactComponent as LinkedLogo} from './img/linkedin-outline.svg';
-import {ReactComponent as EmailLogo} from './img/email-outline.svg';
+import {ReactComponent as GitLogo} from './img/github-outline_1.svg';
+import {ReactComponent as LinkedLogo} from './img/linkedin-outline_1.svg';
+import {ReactComponent as EmailLogo} from './img/email-outline_1.svg';
+import useWindowDimensions from "./WindowDimension.js";
 
-class Contact extends Component {
-    constructor(props) {
-    super(props);
-    this.state = {
+const Contact = () => {
     
-        };
-    }
+    const { height } = useWindowDimensions();
     
-    render(){
-     
-        return (
+    return (
         
         <div className="contact">    
         
@@ -24,13 +19,13 @@ class Contact extends Component {
                     matches.small ? (    
                     <div className="contact__mobile"> 
                         <div className="contact__mobile-header">
-                            <h4>05. Contact</h4>
+                            <h4>05. Get in touch</h4>
                         </div>
                         
-                        <div className="contact__mobile-content">
-                            <h3>I'm available for hire</h3>
+                        <div style={{height: height - 162}} className="contact__mobile-content">
+                            <h3>I'm available for hire!</h3>
                             
-                            <form id="contact-form" method="POST">
+                            <form className="contact-form" method="POST">
                                 <div className="form-group">
                                     <input type="text" className="form-control" placeholder="Name" />
                                 </div>
@@ -50,13 +45,13 @@ class Contact extends Component {
                             </form>
                             
                             
-                            <div className="home__contact" style={{color: "white"}}>
-                                <div className="home__contact-icons">
-                                <GitLogo style={{color: "black"}}/>
+                            <div className="contact__icons">
+                                <div className="contact-icons-right">
+                                <GitLogo/>
                                 <LinkedLogo />
                                 <EmailLogo /> 
+                                </div>
                             </div>
-        </div>
                             
                         </div>
                         
@@ -70,7 +65,7 @@ class Contact extends Component {
             </Media>
         </div>    
         );
-    }
-}
+    };
+
 
 export default Contact;

@@ -8,7 +8,6 @@ import Media from 'react-media';
 import Picture from "../img/ToDo.png"; 
 import Div100vh from 'react-div-100vh';
 
-
 const Todo = ({ history }) => (
     
     <Media queries={{ small: "(max-width: 599px)" }}>
@@ -66,10 +65,10 @@ const Todo = ({ history }) => (
                 </div>
             </div>
             
-             <Link className="project__id-laptop-button-back" to="/portfolio/trillo_page">
+            <Link className="project__id-laptop-button-back" to="/portfolio/trillo_page">
             <BackButton  />
             </Link>
-             <div className="btn project__id-laptop-btn">
+            <div className="btn project__id-laptop-btn">
             <a href="#">Visit Page</a>
             </div>
             <Link className="project__id-laptop-button-forward" to="/portfolio/endless_winter_project">

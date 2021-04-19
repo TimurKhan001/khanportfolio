@@ -8,7 +8,6 @@ import Media from 'react-media';
 import Picture from "../img/EndlessWinter.png";
 import Div100vh from 'react-div-100vh';
 
-
 const EndlessWinter = ({ history }) => (
     
     <Media queries={{ small: "(max-width: 599px)" }}>
@@ -22,7 +21,7 @@ const EndlessWinter = ({ history }) => (
             
                 <div className="project__id-main-text">
                     <p style={{fontSize: "12px"}}>Featured Project</p>
-                    <h4 className="mt-small">Endless Winter Webpage</h4>
+                    <h4 className="mt-small">Endless Winter Website</h4>
                     <p className="mt-medium">A website presenting the Endless Winter company from Austria. The website was developed using several JavaScript libraries with Node JS and Express on the backend. All queries from the webpage are saved to the database and sent to the company’s email.</p>
                     <ul className="project__id-main-text-list mt-big">
                         <li>HTML</li>
@@ -30,7 +29,7 @@ const EndlessWinter = ({ history }) => (
                         <li>JS</li>
                         <li>JQuery</li>
                         <li>Pagepiling JS</li>
-                        <li>SweetAlert2 JS</li>
+                        <li>SweetAlert2</li>
                     </ul>
                 </div>
             </div>
@@ -52,7 +51,7 @@ const EndlessWinter = ({ history }) => (
             <div className="project__id-laptop-content">
                 <img src={Picture} alt="endless_winter_webpage" />
                 <div className="project__id-laptop-content-text">
-                    <p>Featured Project<br /><span>Endless Winter Webpage</span></p>
+                    <p>Featured Project<br /><span>Endless Winter Website</span></p>
                     <div className="project__id-laptop-content-text-box mt-medium">
                         <p>A website presenting the Endless Winter company from Austria. The website was developed using several JavaScript libraries with Node JS and Express on the backend. All queries from the webpage are saved to the database and sent to the company’s email.</p>
                     </div>
@@ -63,7 +62,7 @@ const EndlessWinter = ({ history }) => (
                         <li>JS</li>
                         <li>JQuery</li>
                         <li>Pagepiling JS</li>
-                        <li>SweetAlert2 JS</li>
+                        <li>SweetAlert2</li>
                     </ul>
                 </div>
             </div>

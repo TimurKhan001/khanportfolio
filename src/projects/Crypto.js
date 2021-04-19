@@ -17,7 +17,7 @@ const Crypto = ({ history }) => (
     
     <Div100vh className="project__id-content">
         <div className="project__id-main" id="crypto">
-            <ArrowBack style={{ cursor: "pointer", margin: "2rem 1.5rem"}} onClick={() => history.goBack()} /> 
+            <ArrowBack style={{ cursor: "pointer", margin: "2rem 1.5rem"}} onClick={() => history.goBack()} />
             
             <div className="project__id-main-text">
                 <p style={{fontSize: "12px"}}>Featured Project</p>
@@ -27,12 +27,13 @@ const Crypto = ({ history }) => (
                     <li>React JS</li>
                     <li>CSS</li>
                     <li>Axios</li>
+                    <li>Flexbox Layout</li>
                 </ul>
             </div>
             
         </div>
-        
-            <div className="project__id-bottom">
+                
+                <div className="project__id-bottom">
                 <div className="btn btn-white" >
                     <a href="#">Visit Page</a>
                 </div>
@@ -58,6 +59,7 @@ const Crypto = ({ history }) => (
                         <li>React JS</li>
                         <li>CSS</li>
                         <li>Axios</li>
+                        <li>Flexbox Layout</li>
                     </ul>
                 </div>
             </div>
