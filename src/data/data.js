@@ -166,7 +166,46 @@ const data = {
             "value": "100%"
         }
 
+    ],
+    "skills_default": [
+        {
+            "id": 1,
+            "name": "HTML and CSS",
+            "value": "50%"
+        },
+        {
+            "id": 2,
+            "name": "JavaScript",
+            "value": "50%"
+        },
+        {
+            "id": 3,
+            "name": "React JS",
+            "value": "50%"
+        },
+        {
+            "id": 4,
+            "name": "Node JS",
+            "value": "50%"
+        },
+        {
+            "id": 5,
+            "name": "Mongo DB",
+            "value":"50%"
+        },
+        {
+            "id": 6,
+            "name": "Git and GitHub",
+            "value": "50%"
+        },
+        {
+            "id": 7,
+            "name": "Figma",
+            "value": "50%"
+        }
+
     ]
+    
 };
 
 

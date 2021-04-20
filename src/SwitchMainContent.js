@@ -12,7 +12,7 @@ import Contact from "./Contact";
 
 const SwitchMainContent = () => (
     
-    <Media queries={{ small: "(max-width: 599px)" }}>
+    <Media queries={{ small: "(max-width: 750px)" }}>
         {matches =>
             matches.small ? (   
             

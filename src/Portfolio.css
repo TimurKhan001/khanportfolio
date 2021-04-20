@@ -46,6 +46,8 @@
     grid-row-gap: 2rem;
 }
 
+        
+
                     @media only screen and (min-height: 700px) {
                             .project {
                                 grid-row-gap: 5rem;
@@ -105,7 +107,7 @@
 
 .project__id-main {
     width: 100%;
-    
+    min-height: 70%;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     color: var(--white-color);
@@ -116,35 +118,35 @@
 
 
 #endless-winter {
-    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .9), rgba(13, 37 ,60, .9)), url('./img/gully-flowers-nn7wxsVuSrU-unsplash.jpg');
+    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .9), rgba(13, 37 ,60, .9)), url('./img/EndlessWinterIdBackground.jpg');
 }
 
 #khanproject {
-    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .9), rgba(13, 37 ,60, .9)), url('./img/back_image_6.jpg');
+    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .9), rgba(13, 37 ,60, .9)), url('./img/KhanProjectIdBackground.jpg');
 }
 
 #kamchatka {
-    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .9), rgba(13, 37 ,60, .9)), url('./img/pexels-roman-odintsov-4555671.jpg');
+    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .9), rgba(13, 37 ,60, .9)), url('./img/KamchatkaIdBackground.jpg');
 }
 
 #unic {
-    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .9), rgba(13, 37 ,60, .9)), url('./img/pexels-fotografierende-5541019.jpg');
+    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .9), rgba(13, 37 ,60, .9)), url('./img/UnicIdBackground.jpg');
 }
 
 #crypto {
-    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .9), rgba(13, 37 ,60, .9)), url('./img/pexels-worldspectrum-844124.jpg');
+    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .9), rgba(13, 37 ,60, .9)), url('./img/CryptoIdBackground.jpg');
 }
 
 #reali {
-    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .9), rgba(13, 37 ,60, .9)), url('./img/back.jpg');
+    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .9), rgba(13, 37 ,60, .9)), url('./img/RealiIdBackground.jpg');
 }
 
 #trillo {
-    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .9), rgba(13, 37 ,60, .9)), url('./img/hotel-3.jpg');
+    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .9), rgba(13, 37 ,60, .9)), url('./img/TrilloIdBackground.jpg');
 }
 
 #todo {
-    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .9), rgba(13, 37 ,60, .9)), url('./img/todo_background_1.jpg');
+    background-image: linear-gradient(to bottom, rgba(13, 37 ,60, .9), rgba(13, 37 ,60, .9)), url('./img/ToDoIdBackground.jpg');
 }
 
 .project__id-main-text {
@@ -162,10 +164,12 @@
 
                     @media only screen and (max-height: 580px) {
                         .project__id-main-text {
-                            padding: 2rem;
+                            padding: 0 2rem;
                         }
+                        
+
                         .project__id-main-text-list {
-                            font-size: 14px;
+                            display: none;
                         }    
                     }
                     
@@ -249,6 +253,12 @@
         display: block;
         background-color: currentColor;
 }
+
+                    @media only screen and (min-width: 1900px) {
+                        .portfolio__laptop-title h4 {
+                            font-size: 20px;
+                        }
+                    }
 
 .portfolio__laptop-content {
     width: 100%;
@@ -336,6 +346,19 @@
   background-color: currentColor;
 }
 
+                    @media only screen 
+                        and (min-device-width : 768px) 
+                        and (max-device-width : 1024px) 
+                        and (orientation : portrait) {
+                        .project__id-num h1 {
+                            font-size: 48px;
+                        }
+                        .project__id-num {
+                        grid-template-columns: 10% 20%; 
+                        grid-column-gap: .5rem; 
+                        }
+                    }    
+
 .project__id-laptop-content {
     grid-column: 2 / 4;
     grid-row: 2 / 3;
@@ -364,19 +387,22 @@
 
 .project__id-laptop-content-text {
     width: 40%;
-    height: 80%;
+    height: -webkit-fill-available;   
     text-align: right;
     padding-right: 6rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-end;
     z-index: 111111111111111111111111;
 }
 
-/*.project__id-laptop-content-text p {*/
-/*    line-height: 25px;*/
-/*}*/
+                    @media only screen and (min-width: 1900px) {
+                        .project__id-laptop-content-text p {
+                        font-size: 18px;
+                        }
+                    }
+
 
 .project__id-laptop-content-text span {
     font-weight: 800;

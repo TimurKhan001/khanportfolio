@@ -35,7 +35,7 @@
   margin-top: 6rem;
   padding: 0 2rem;
 }      
-        @media only screen and (max-height: 600px) {
+        @media only screen and (max-height: 568px) {
           .home {
             margin-top: 2rem;
           }
@@ -161,6 +161,12 @@
   color: var(--white-color);
 }
 
+        @media only screen and (max-height: 500px) {
+          .home__contact {
+              display: none;  
+              }
+        }
+
 .home__contact::before {
   content: "";
   height: 1px;
@@ -181,7 +187,7 @@
               bottom: -5%;
               left: 5%;
               grid-template-columns: 30px;
-              grid-template-rows: 50% 50%;
+              grid-template-rows: 1fr 1fr;
             }
             
             .home__contact::before {
@@ -203,6 +209,6 @@
           }
           
             .home__contact-icons svg {
-              margin: .5rem;
+              margin: .8rem;
             }
         }

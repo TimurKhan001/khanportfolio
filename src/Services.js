@@ -24,21 +24,19 @@ const ServiceLaptop = ({id, name, number, description, cards, clickLeft, clickRi
         
         <div className="services__laptop-content">
                             
-                            <div className="services__id-num"><h1>{number}</h1></div> 
-        <div className="services__id-laptop-content">
-                        <h2>{name}</h2>
-                                <p className="mt-medium">{description}</p>
-                                <div className="services__id-laptop-cards mt-medium">
-                                {features}
-                            
-                                </div>
-                            </div>
-                            
-                            <BackButton onClick={() => clickLeft()} className="services__id-laptop-left" />
-                            <ForwardButton onClick={() => clickRight()} className="services__id-laptop-right" />
+        <div className="services__id-num"><h1>{number}</h1></div> 
+            <div className="services__id-laptop-content">
+                <h2>{name}</h2>
+                <p className="mt-medium">{description}</p>
+                <div className="services__id-laptop-cards mt-medium">
+                    {features}
+                </div>
+            </div>
+            <BackButton onClick={() => clickLeft()} className="services__id-laptop-left" />
+            <ForwardButton onClick={() => clickRight()} className="services__id-laptop-right" />
         </div>                    
     );
-}
+};
 
 
 class Services extends Component {
@@ -87,15 +85,12 @@ class Services extends Component {
     
     render(){
         const {id, number, name, description, cards} = this.state.service;
-        const appear = this.state.appear;
-        
-        
         
         return (
         
         <div className="services">    
         
-            <Media queries={{ small: "(max-width: 599px)" }}>
+            <Media queries={{ small: "(max-width: 750px)" }}>
                 {matches =>
                     matches.small ? (    
                     <div onTouchStart={this.handleTouchStart} onTouchEnd={this.handleTouchEnd}  className="services__mobile"> 
@@ -133,7 +128,7 @@ class Services extends Component {
                             >
                             
                         <ServiceLaptop id={id} number={number} name={name} description={description} cards={cards} clickLeft={this.prevService} clickRight={this.nextService} />
-                
+                        
                         </CSSTransition>
                         </TransitionGroup>
                     </div>

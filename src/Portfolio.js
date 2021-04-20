@@ -112,7 +112,7 @@ class Portfolio extends Component {
             
         <div className="portfolio">
                 
-            <Media queries={{ small: "(max-width: 599px)" }}>
+            <Media queries={{ small: "(max-width: 750px)" }}>
                 {matches =>
                     matches.small ? (
                         <div onTouchStart={this.handleTouchStart} onTouchEnd={this.handleTouchEnd} className="portfolio__mobile">              

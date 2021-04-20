@@ -34,18 +34,33 @@ class About extends Component {
     constructor(props) {
     super(props);
     this.state = {
-        skills: data.skills
+        skills: data.skills_default
         };
+    }
+    
+    componentDidMount = () => {
+        setTimeout(() => {
+            this.setState({skills: data.skills});
+        }, 500);
     }
     
     render(){
         const skills = this.state.skills;
+        
+        const myskills = skills.map((item) => (
+            <div className="about__laptop-skill" 
+                key={item.id}
+                style={{width: item.value}}
+                >
+                <p>{item.name}</p>
+            </div>    
+        ));
     
         return (
         
         <div className="about">    
         
-            <Media queries={{ small: "(max-width: 599px)" }}>
+            <Media queries={{ small: "(max-width: 750px)" }}>
                 {matches =>
                     matches.small ? (    
                     <div className="about__mobile"> 
@@ -61,7 +76,22 @@ class About extends Component {
                     
                     ) : (
                     
-                    <div></div>
+                    <div className="about__laptop">
+                        <div className="about__laptop-title">
+                            <h4>04. The tools I use </h4>
+                        </div>    
+                        
+                        <div className="about__laptop-content"> 
+                            <div className="about__laptop-text mt-big">
+                             <p>I'm a freelance Web developer. I have a keen eye for detail and a pride in producing outstanding websites and services for clients around the world.</p>
+                             <div className="about__laptop-skills">
+                             <p className="mt-medium" style={{fontWeight: 'bold'}}>Skills: </p>  
+                             {myskills}
+                        </div>
+                        </div>
+                        </div>
+                    
+                    </div>    
                     )
                 }
             </Media>

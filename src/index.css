@@ -61,6 +61,12 @@ body {
   overflow: hidden;
 }
 
+        @media only screen and (max-height: 500px) {
+            body {
+              overflow: visible;
+            } 
+        }
+
         @media only screen and (min-width: 750px) {
           body {
             padding: 2rem;
@@ -92,6 +98,7 @@ p {
     /* or 125% */
   letter-spacing: 0.05em;
 }
+
 
 a {
   color: inherit;
@@ -163,17 +170,38 @@ a {
           padding: .4rem .5rem;
           transition: all .3s ease-in; 
           }
-  
+          
+        .nav-laptop__link::before {
+          content: "";
+          background-color: var(--white-color);
+          border-radius: 30px;
+          width: 0;
+          height: 2px;
+          position: absolute;
+          bottom: -2px;
+          left: 50%;
+          transform: translateX(-50%);
+          transition: all .5s ease-in;
+        }  
+        
         a.nav-laptop__link:hover {
           transform: translateY(-3px) scale(1.1);
           }
+        
+        /*a.nav-laptop__link:hover ~ .nav-laptop__link::before {*/
+        /*  width: 90%;*/
+        /*}  */
           
         .nav-laptop__link-active {
-          border: 2px solid var(--white-color);
-          padding: 1rem .5rem;
-          border-radius: 5px;
-        }  
+          position: relative;
+        } 
+        
+        .nav-laptop__link-active::before {
+          content: "";
+          width: 90%; 
         }
+        
+      }
 
 .navigation__logo {
   height: 4rem;
@@ -410,4 +438,21 @@ a {
 .move-exit-done {
   opacity: 0;
 }
+
+.fade-in {
+  animation: fadein 1s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 1;
+
+  }
+}
+
 
