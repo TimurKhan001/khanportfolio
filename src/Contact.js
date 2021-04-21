@@ -23,7 +23,7 @@ const handleSubmit = async (e) => {
       message: message.value,
     };
 
-let response = await window.fetch("http://35.158.111.241:8081/contact", {
+let response = await window.fetch("https://my-portfolio-back-tk.herokuapp.com/contact", {
       method: "post",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
