@@ -117,8 +117,8 @@ p {
 a {
   color: inherit;
   text-decoration: inherit;
+  transition: all .5s linear;
 }
-
 
 .container {
   width: 100%;
@@ -487,4 +487,6 @@ a {
   }
 }
 
-
+.contact-icons:hover {
+transform: translateY(-3px) scale(1.1);
+}

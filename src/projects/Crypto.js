@@ -35,7 +35,7 @@ const Crypto = ({ history }) => (
                 
                 <div className="project__id-bottom">
                 <div className="btn btn-white" >
-                    <a href="#">Visit Page</a>
+                    <a href="https://cryptonewsnow.netlify.app/" target="_blank" rel="noopener noreferrer">Visit Page</a>
                 </div>
             </div>
             
@@ -68,7 +68,7 @@ const Crypto = ({ history }) => (
             <BackButton  />
             </Link>
              <div className="btn project__id-laptop-btn">
-            <a href="#">Visit Page</a>
+            <a href="https://cryptonewsnow.netlify.app/" target="_blank" rel="noopener noreferrer">Visit Page</a>
             </div>
             <Link className="project__id-laptop-button-forward" to="/portfolio/reali_landing">
             <ForwardButton  />

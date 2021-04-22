@@ -37,7 +37,7 @@ const Unic = ({ history }) => (
         
             <div className="project__id-bottom">
                 <div className="btn btn-white" >
-                    <a href="#">Visit Page</a>
+                    <a href="https://unic-app.netlify.app/" target="_blank" rel="noopener noreferrer">Visit Page</a>
                 </div>
             </div>
             
@@ -72,7 +72,7 @@ const Unic = ({ history }) => (
             <BackButton  />
             </Link>
             <div className="btn project__id-laptop-btn">
-            <a href="#">Visit Page</a>
+            <a href="https://unic-app.netlify.app/" target="_blank" rel="noopener noreferrer">Visit Page</a>
             </div>
             <Link className="project__id-laptop-button-forward" to="/portfolio/crypto_web">
             <ForwardButton  />

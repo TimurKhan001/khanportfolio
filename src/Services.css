@@ -242,10 +242,12 @@
                         and (min-device-width : 768px) 
                         and (max-device-width : 1024px) 
                         and (orientation : portrait) {
-                        .services__laptop-content {
+                        .services__id-laptop-content {
                             grid-template-columns: 2fr 10fr 2fr;
                             grid-template-rows: 1fr;
                             grid-gap: 1rem;
+                            padding: 2.5rem;
+                            transform: translateY(-5rem);
                         }
                         .services__id-laptop-cards {
                         display: flex;

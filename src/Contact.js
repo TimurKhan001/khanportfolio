@@ -78,9 +78,9 @@ return (
                             
                             <div className="contact__icons">
                                 <div className="contact-icons-right">
-                                <GitLogo/>
-                                <LinkedLogo />
-                                <EmailLogo /> 
+                                    <a className="contact-icons" href="https://github.com/TimurKhan001" target="_blank" rel="noopener noreferrer"><GitLogo /></a>
+                                    <a className="contact-icons" href="https://www.linkedin.com/in/timur-khananov-1b1636210/" target="_blank" rel="noopener noreferrer"><LinkedLogo /></a>
+                                    <a className="contact-icons" href = "mailto: abc@example.com"><EmailLogo /></a> 
                                 </div>
                             </div>
                         </div>
@@ -118,9 +118,9 @@ return (
                             
                             <div className="home__contact">
                                 <div className="home__contact-icons">
-                                    <GitLogoWhite />
-                                    <LinkedLogoWhite />
-                                    <EmailLogoWhite /> 
+                                    <a className="contact-icons" href="https://github.com/TimurKhan001" target="_blank" rel="noopener noreferrer"><GitLogoWhite /></a>
+                                    <a className="contact-icons" href="https://www.linkedin.com/in/timur-khananov-1b1636210/" target="_blank" rel="noopener noreferrer"><LinkedLogoWhite /></a>
+                                    <a className="contact-icons" href = "mailto: abc@example.com"><EmailLogoWhite /></a> 
                                 </div>
                             </div>
                             
