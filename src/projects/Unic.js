@@ -6,17 +6,17 @@ import {ReactComponent as BackButton} from '../img/back_button.svg';
 import {ReactComponent as ForwardButton} from '../img/forward_button.svg';
 import Media from 'react-media';
 import Picture from "../img/Unic.png";
-import Div100vh from 'react-div-100vh';
+import Div100vh from 'react-div-100vh'; 
 
 
 const Unic = ({ history }) => (
     
-    <Media queries={{ small: "(max-width: 599px)" }}>
+    <Media queries={{ small: " (max-width: 750px) " }}>
         {matches =>
             matches.small ? (  
     
     <Div100vh className="project__id-content">
-        <div className="project__id-main" id="unic">
+        <div className="project__id-main" id="unic"> 
             <ArrowBack style={{ cursor: "pointer", margin: "2rem 1.5rem"}} onClick={() => history.goBack()} /> 
             
             <div className="project__id-main-text">
@@ -68,10 +68,10 @@ const Unic = ({ history }) => (
                 </div>
             </div>
             
-             <Link className="project__id-laptop-button-back" to="/portfolio/kamchatka_tours">
+            <Link className="project__id-laptop-button-back" to="/portfolio/kamchatka_tours">
             <BackButton  />
             </Link>
-             <div className="btn project__id-laptop-btn">
+            <div className="btn project__id-laptop-btn">
             <a href="#">Visit Page</a>
             </div>
             <Link className="project__id-laptop-button-forward" to="/portfolio/crypto_web">
@@ -85,6 +85,4 @@ const Unic = ({ history }) => (
     
     );
     
-export default Unic;
-
-    
+export default Unic; 

@@ -11,7 +11,7 @@ import Div100vh from 'react-div-100vh';
 
 const Crypto = ({ history }) => (
     
-    <Media queries={{ small: "(max-width: 599px)" }}>
+    <Media queries={{ small: "(max-width: 750px)" }}>
         {matches =>
             matches.small ? (  
     

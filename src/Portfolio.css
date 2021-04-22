@@ -46,8 +46,6 @@
     grid-row-gap: 2rem;
 }
 
-        
-
                     @media only screen and (min-height: 700px) {
                             .project {
                                 grid-row-gap: 5rem;

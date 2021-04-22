@@ -98,6 +98,12 @@ const data = {
                         "name": "Dynamic",
                         "img": Activity,
                         "desc": "I love making pages come to life."
+                    },
+                    {
+                        "id": 4,
+                        "name": "Fast",
+                        "img": Flash,
+                        "desc": "Fast load times and lag free interaction."
                     }
                 ]
             
@@ -125,6 +131,12 @@ const data = {
                         "name": "Structured",
                         "img": Layers,
                         "desc": "I create a clean, easy to read and maintain code."
+                    },
+                    {
+                        "id": 4,
+                        "name": "Quality\n Garantee",
+                        "img": Shield,
+                        "desc": "I grant a 30 day warranty for all finished projects."
                     }
                 ]
         }

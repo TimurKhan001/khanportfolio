@@ -8,13 +8,14 @@ import Media from 'react-media';
 import Picture from "../img/EndlessWinter.png";
 import Div100vh from 'react-div-100vh';
 
+
 const EndlessWinter = ({ history }) => (
     
-    <Media queries={{ small: "(max-width: 599px)" }}>
+    <Media queries={{ small: "(max-width: 750px)" }}>
         {matches =>
             matches.small ? (    
     
-        <Div100vh className="project__id-content" >
+        <Div100vh  className="project__id-content" >
     
             <div className="project__id-main" id="endless-winter" >
                 <ArrowBack style={{ cursor: "pointer", margin: "2rem 1.5rem"}} onClick={() => history.goBack()} /> 

@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react';
+import React, {useState} from 'react';
 import Media from 'react-media'; 
 import "./Contact.css";
 import {ReactComponent as GitLogo} from './img/github-outline_1.svg';
@@ -34,7 +34,11 @@ let response = await window.fetch("https://my-portfolio-back-tk.herokuapp.com/co
     let result = await response.json();
     alert(result.status);
     window.location.reload();
-  };    
+  };
+  
+ const handleBlur = () => {
+    window.scrollTo(0, 0); 
+ }; 
     
 const { height } = useWindowDimensions();
     
@@ -55,15 +59,15 @@ return (
                             
                             <form className="contact-form" onSubmit={handleSubmit}>
                                 <div className="form-group">
-                                    <input type="text" className="form-control" placeholder="Name" id="name" required  />
+                                    <input onBlur={handleBlur} type="text" className="form-control" placeholder="Name" id="name" required  />
                                 </div>
                                     
                                 <div className="form-group">
-                                    <input type="email" className="form-control" placeholder="Email" id="email" required />
+                                    <input onBlur={handleBlur} type="email" className="form-control" placeholder="Email" id="email" required />
                                 </div>
                                     
                                 <div className="form-group">
-                                    <textarea className="form-control" rows="5" placeholder="Type your message" id="message" required></textarea>
+                                    <textarea onBlur={handleBlur} className="form-control" rows="5" placeholder="Type your message" id="message" required></textarea>
                                 </div>
                                     
                                 <div className="form-group">

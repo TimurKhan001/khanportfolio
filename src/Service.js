@@ -28,7 +28,7 @@ const ServiceContent = ({id, number, name, description, cards}) => {
             
                 <p>{item.name}</p>
                 <img src={item.img} alt={item.name}/>
-                <p className="mt-small">{item.desc}</p>
+                <span><p className="mt-small">{item.desc}</p></span>
             
             </div>
         ));
@@ -36,7 +36,7 @@ const ServiceContent = ({id, number, name, description, cards}) => {
     return (   
     <div style={{height: height - 162}} className="services__mobile-content">
     
-        <h3>{name}</h3>
+        <h4>{name}</h4>
         <p className="mt-medium">{description}</p>
         
         <div className="services__mobile-content-features mt-medium">

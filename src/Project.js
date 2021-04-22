@@ -4,10 +4,14 @@ import {Link, useRouteMatch} from 'react-router-dom';
 import useWindowDimensions from "./WindowDimension.js";
 
 
-
 const Slide = ({id, route, name, image, small_description}) => {
     let { url } = useRouteMatch();
     const { height } = useWindowDimensions();
+    
+    const handleClick = () => {
+        window.scrollTo(0, 0);
+    };
+    
     return (
         
  
@@ -22,7 +26,7 @@ const Slide = ({id, route, name, image, small_description}) => {
             <p className="mt-small ">{small_description}</p>
             </div>
             <div className="btn" >
-                 <Link to={`${url}/${route}`}>View Project</Link>
+                 <Link onClick={handleClick} to={`${url}/${route}`}>View Project</Link>
             </div>
         </div>  
         

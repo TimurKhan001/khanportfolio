@@ -8,13 +8,11 @@ import {ReactComponent as LeftBtn} from './img/arrowhead-left-outline_1.svg';
 import {ReactComponent as RightBtn} from './img/arrowhead-right-outline_1.svg';
 import SwitchProjects from "./SwitchProjects";
 import {Link, useRouteMatch} from 'react-router-dom';
-import { Swipeable } from 'react-touch';
-
 
 const ProjectLaptop = ({ route, image, name}) => {
     
     let { url } = useRouteMatch();
-    
+          
         return (
             <Link to={`${url}/${route}`} className="portfolio__laptop-project">
                     
@@ -73,7 +71,7 @@ class Portfolio extends Component {
     }
     
     render(){
-        
+            
         const appear = this.state.appear;
         
         const onWheel = (e) => {
@@ -86,28 +84,14 @@ class Portfolio extends Component {
             };
         
         const {id, route, name, small_description, image} = this.state.project;
-
+            
             const projects = this.state.projects.map((item, index) => (
                 
                 <ProjectLaptop key={index} route={item.route} image={item.image} name={item.name} />
                
                 ));
-        
-        let first;
-        let second;
                 
-        const func1 = ((event) => {
-            console.log("move", event.changedTouches[0].screenX);
-            first = event.changedTouches[0].screenX;
-            console.log(first);
-        });
-        
-       
-        
-        const func2 = ((event) => {
-            console.log("move", event.changedTouches[0].screenX);
-        });
-        
+                
         return (
             
         <div className="portfolio">
@@ -131,26 +115,28 @@ class Portfolio extends Component {
                                 appear={false}
                                 timeout={800}
                                 classNames="fade"
-                            >
+                                >
                                 <Project id={id} route={route} name={name} small_description={small_description} image={image}/>
                             </CSSTransition>
-    
                         </div>
+                        
                     ) : (
+                    
                         <div className="portfolio__laptop">
+                                
                             <div className="project__id">
                                 <SwitchProjects />  
                             </div>
-                            
+                                
                             <div className="portfolio__laptop-title">
                                 <h4>02. Some thing I've built</h4>
                             </div>
                             <div ref={this.divRef}
                                 onWheel={onWheel}
                                 className="portfolio__laptop-content"
-                            >
+                                >
                                 {projects}
-
+                                
                             </div>
                         </div>
                     )

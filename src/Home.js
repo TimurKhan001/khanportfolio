@@ -14,7 +14,7 @@ const Home = () => (
         <h3>Hi,<br /> I’m Tim,</h3>
         <h2>A full-stack<br /> web developer</h2>
         <div className="btn mt-medium">
-            <a href="#">Get In Touch</a>
+            <a href="/contact">Get In Touch</a>
         </div>
         
         <div className="home__contact">

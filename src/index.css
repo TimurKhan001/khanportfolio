@@ -28,9 +28,9 @@
   clear: both;
 }
 
-.project__transition {
-  width: 100%;
-}
+/*.project__transition {*/
+/*  width: 100%;*/
+/*}*/
 
 html {
   box-sizing: border-box;
@@ -44,11 +44,11 @@ html {
   box-sizing: inherit;
 }
 
-body, html, #root {
-  height: 100%;
-  width: 100%;
+/*body, html, #root {*/
+/*  height: 100%;*/
+/*  width: 100%;*/
 
-}
+/*}*/
 
 html {
   font-size: 62.5%;
@@ -57,15 +57,29 @@ html {
 }
 
 body {
+    width: 100%;
+    height: 100%;
+    position: fixed;
   font-family: 'Nunito', sans-serif;
   overflow: hidden;
 }
 
-        @media only screen and (max-height: 500px) {
+.blocked {
+    overflow: hidden;
+}
+
+.unblocked {
+    overflow: hidden;
+}
+
+        @media only screen and (max-height: 568px) {
             body {
-              overflow: visible;
-            } 
-        }
+                overflow: visible;
+            }
+            .unblocked {
+                overflow: visible;
+            }
+            }
 
         @media only screen and (min-width: 750px) {
           body {
@@ -104,6 +118,7 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+
 
 .container {
   width: 100%;
@@ -283,6 +298,17 @@ a {
   text-underline-offset: 5px;
 }
 
+                    @media only screen and (max-height: 568px) {
+                        .navigation__item {
+                            margin: .5rem;
+                        }
+                        .navigation__link,
+                        .navigation__link:link,
+                        .navigation__link:visited {
+                            font-size: 2.8rem;
+                        }
+                    }
+
 .navigation__checkbox:checked ~ .navigation__background {
   position: absolute;
   width: 100%;
@@ -302,6 +328,12 @@ a {
 .navigation__checkbox:checked ~ .navigation__button {
   background-color: var(--secondary-color);
 }
+
+                    @media only screen and (max-height: 568px) {
+                        .navigation__checkbox:checked ~ .navigation__background {
+                          overflow: hidden;
+                        } 
+                    }
 
 .navigation__icon {
   position: relative;
