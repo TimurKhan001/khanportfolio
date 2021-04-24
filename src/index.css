@@ -60,8 +60,8 @@ body {
     width: 100%;
     height: 100%;
     position: fixed;
-  font-family: 'Nunito', sans-serif;
-  overflow: hidden;
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden;
 }
 
 .blocked {
@@ -80,6 +80,7 @@ body {
                 overflow: visible;
             }
             }
+        
 
         @media only screen and (min-width: 750px) {
           body {
@@ -119,6 +120,28 @@ a {
   text-decoration: inherit;
   transition: all .5s linear;
 }
+
+.landscape-mobile {
+    display: none;
+}
+
+         @media only screen 
+            and (max-width: 749px)    
+            and (orientation : landscape) {
+                .landscape-mobile {
+                    display: block;
+                    background-color: var(--primary-color);
+                    position: fixed;
+                    z-index: 999999;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    color: var(--white-color);
+                    text-align: center;
+                }
+
+            } 
 
 .container {
   width: 100%;

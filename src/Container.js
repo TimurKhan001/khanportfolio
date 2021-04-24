@@ -85,6 +85,8 @@ class Container extends Component {
                         </Div100vh>
                 </div>
                 
+                <div className="landscape-mobile"><h2 className="mt-big">Please turn me back to portrait mode</h2></div>
+                
                 <div className="main_content">
                     
                     <SwitchMainContent />
