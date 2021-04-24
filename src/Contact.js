@@ -98,7 +98,7 @@ return (
                                 <p>You can contact me by using the contact form below or by sending an e-mail to timurkhan@seznam.cz. I always respond to messages within 24 hrs.</p>
                                 
                                 <form className="contact-form" onSubmit={handleSubmit}>
-                                    <div className="form-group mt-big">
+                                    <div className="form-group mt-medium">
                                         <input type="text" className="form-control" placeholder="Name" id="name" required/>
                                     </div>
                                         
@@ -110,7 +110,7 @@ return (
                                         <textarea className="form-control" rows="5" placeholder="Type your message" id="message" required></textarea>
                                     </div>
                                         
-                                    <div className="form-group mt-big">
+                                    <div className="form-group mt-medium">
                                         <button style={{cursor: "pointer"}} type="submit" className="btn">Send</button>
                                     </div>
                                 </form>
